@@ -97,6 +97,77 @@
         </form>
       </section>
 
+      <!--HOTEL CATALOG-->
+      <section class="hotel-catalog">
+        <header class="hotel-catalog-header">
+          <h2 class="hotel-catalog-name">Найдено гостиниц:<span> 38</span></h2>
+
+          <div class="hotel-catalog-sorting">
+            <select name="sorting">
+              <option value="popular" selected>популярное</option>
+              <option value="descending">цена по убыванию</option>
+              <option value="ascending">цена по возрастанию</option>
+              <option value="rating">по рейтингу</option>
+            </select>
+
+            <div class="catalog-sorting-menu">
+              <button class="sorting-menu-button visually-hidden" type="button">Плитка</button> <!--Я не знаю как улучшить классы-->
+              <button class="sorting-menu-button visually-hidden" type="button">Крупные блоки</button><!--К кнопкам же нужно будет потом-->
+              <button class="sorting-menu-button visually-hidden" type="button">Список</button><!--индивидуально как-то обращаться-->
+            </div>
+          </div>
+        </header>
+
+        <div class="hotel-card">
+          <img src="#" alt="Вид на звездное ночное небо из ущелья">
+          <h3><b>Amara Resort & Spa</b></h3>
+          <p>Гостиница</p> <span class="hotel-cost">От 4000 ₽</span>
+          <button class="button-base" type="button">подробнее</button>
+          <button class="button-base button-like" type="button">в избранное</button>
+          <span class="hotel-star visually-hidden"> 4 звезды</span> <!--Обязательно ли прописывать кол-во звезд для скрин-ридера, если написан рейтинг?-->
+          <span class="hotel-rating">Рейтинг: 8,5</span>
+        </div>
+
+        <div class="hotel-card">
+          <img src="#" alt="Вид на Красные горы с радугой в пасмурном небе">
+          <h3><b>Villas at Poco Diablo</b></h3>
+          <p>Гостиница</p> <span class="hotel-cost">От 5000 ₽</span>
+          <button class="button-base" type="button">подробнее</button>
+          <button class="button-base button-like" type="button">в избранном</button>
+          <span class="hotel-star  visually-hidden"></span>
+          <span class="hotel-rating">Рейтинг: 9,2</span>
+        </div>
+
+        <div class="hotel-card">
+          <img src="#" alt="Близкий вид на Красные горы">
+          <h3><b>Desert Quail Inn</b></h3>
+          <p>Гостиница</p> <span class="hotel-cost">От 2500 ₽</span>
+          <button class="button-base" type="button">подробнее</button>
+          <button class="button-base button-like" type="button">в избранное</button>
+          <span class="hotel-star  visually-hidden"></span>
+          <span class="hotel-rating">Рейтинг: 6,9</span>
+        </div>
+
+        <div class="hotel-card">
+          <img src="#" alt="Ночной вид на Красные горы. Очень красно">
+          <h3><b>GreenTree Inn</b></h3>
+          <p>Гостиница</p> <span class="hotel-cost">От 1500 ₽</span>
+          <button class="button-base" type="button">подробнее</button>
+          <button class="button-base button-like" type="button">в избранное</button>
+          <span class="hotel-star  visually-hidden"></span>
+          <span class="hotel-rating">Рейтинг: 5,0</span>
+        </div>
+
+        <div class="pagination">
+          <a class="pagination-active" href="#">1</a>
+          <a href="#">2</a>
+          <a  href="#">3</a>
+          <a href="#">4</a>
+          <a>...</a>
+          <a href="#">10</a>
+        </div>
+      </section>
+
       <!--EMAIL SUBSCRIPTION-->
       <section class="emai-subscription">
         <h2>Подпишитесь на рассылку</h2>
