@@ -19,6 +19,85 @@
       </div>
     </header>
 
+    <main class="catalog-main">
+
+      <!--FILTER-->
+      <section class="hotel-filter">
+        <header class="inner-header">
+          <h1 class="inner-header-title">Гостиницы Седоны</h1>
+          <ol class="breadcrumbs">
+            <li class="breadcrumbs-item">
+              <a class="breadcrumbs-link visually-hidden" href="index.html">Главная</a>
+            </li>
+            <li class="breadcrumbs-item">
+              <a class="breadcrumbs-link" href="">Гостиницы</a>
+            </li>
+          </ol>
+        </header>
+
+        <form action="https://echo.htmlacademy.ru/" method="get">
+          <fieldset>
+            <legend>Инфраструктура:</legend>
+            <ul>
+              <li>
+                <label class="control">
+                  <input type="checkbox" name="pool" checked>
+                  Бассейн
+                </label>
+              </li>
+
+              <li>
+                <label class="control">
+                  <input type="checkbox" name="parking" checked>
+                  Парковка
+                </label>
+              </li>
+
+              <li>
+                <label class="control">
+                  <input type="checkbox" name="wi-fi">
+                  Wi-Fi
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+
+          <fieldset>
+            <legend>Тип жилья:</legend>
+            <ul>
+              <li>
+                <label class="control">
+                  <input type="radio" name="lodging" value="hotel" checked>
+                  Гостиница
+                </label>
+              </li>
+
+              <li>
+                <label class="control">
+                  <input type="radio" name="lodging" value="motel">
+                  Мотель
+                </label>
+              </li>
+
+              <li>
+                <label class="control">
+                  <input type="radio" name="lodging" value="apartment">
+                  Апартаменты
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+
+          <label class=""> Стоимость, ₽:
+            <input type="range" min="0" value="9000"> <!--something with output-->
+          </label>
+
+          <button class="button-base" type="submit">Применить</button>
+          <button class="button-reset" type="reset">Сбросить</button>
+        </form>
+      </section>
+    </main>
+
     <footer class="page-footer">
       <div class="socials">
         <a class="visually-hidden" href="#">Вконтакте</a>
