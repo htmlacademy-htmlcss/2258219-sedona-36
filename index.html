@@ -15,7 +15,7 @@
       <div class="page-header-buttons">
         <button class="page-header-search visually-hidden" type="button">Поиск</button><!--Мне кажется, иконка - декоративный элемент-->
         <button class="page-header-like visually-hidden" type="button">Понравившееся</button><!-- pop-up: <ol><li>(hotels)</li><button><a>Посмотроть еще</a></button>-->
-        <button class="page-header-registration" type="button">Хочу сюда!</button><!--pop-up with the form?-->
+        <button class="button-base" type="button">Хочу сюда!</button><!--pop-up with the form?-->
       </div>
     </header>
 
@@ -68,6 +68,7 @@
 
       <!--SERVICE-->
       <section class="service">
+        <h2 class="visually-hidden">Обслуживание</h2>
         <div class="service-item service-item-main">
           <h3>Приезжайте в Седону отдохнуть в комфорте и уюте!</h3>
           <p>Опытный персонал и качественное обслуживание!</p>
@@ -87,6 +88,38 @@
           <h3>Сувениры</h3>
           <p>Не только китайского, но и настоящего местного производства!</p>
         </div>
+      </section>
+
+      <section class="hotel-search">
+        <h2 class="visually-hidden">Поиск гостиницы</h2>
+          <h3>Заинтересовались?</h3>
+          <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие
+            предложения гостиниц в Седоне</p>
+          <button class="button-base" type="menu">Поиск гостиницы в Седоне</button>
+          <menu class="hotel-search-form">
+            <h2 class="visually-hidden">Поиск гостиницы в Седоне</h2>
+            <button type="button"><span class="visually-hidden">Закрыть</span></button>
+            <form action="https://echo.htmlacademy.ru/" method="get">
+              <label>Дата заезда:
+                <input type="date"> <!--В js стилизовать формы и кнопки лучше же, ввиду большей гибкости/возможностей?-->
+              </label><!--value="27 апреля 2020"-->
+
+              <label>Дата выезда:
+                <input type="date"><!--value="1 сентября 2023"-->
+              </label>
+
+              <label>Взрослые:
+                <input type="number" min="1" step="1" value="2">
+              </label>
+
+              <label>Дети:
+                <button class="tooltip-button-information" type="button">Уточнение</button>
+                <input type="number" min="0" step="1" value="2">
+              </label>
+
+              <button class="button-base" type="submit">Найти</button>
+            </form>
+          </menu>
       </section>
     </main>
 
