@@ -105,17 +105,17 @@
           <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие
             предложения гостиниц в Седоне</p>
           <button class="button-base" type="button">Поиск гостиницы в Седоне</button>
-          <!--Я находила type="menu", насколько поняла - для выпадабщего меню, но валидатор выдавал ошибку на кнопку и тег <menu> "Element form not allowed as child of element menu in this context"-->
+
           <div class="hotel-search-form">
             <h2 class="visually-hidden">Поиск гостиницы в Седоне</h2>
             <button type="button"><span class="visually-hidden">Закрыть</span></button>
             <form action="https://echo.htmlacademy.ru/" method="get">
               <label>Дата заезда:
-                <input type="date"> <!--В js стилизовать формы и кнопки лучше же, ввиду большей гибкости/возможностей?-->
-              </label><!--value="27 апреля 2020"-->
+                <input type="date" value="2020.04.27"> <!--В js стилизовать формы и кнопки лучше же, ввиду большей гибкости/возможностей?-->
+              </label>
 
               <label>Дата выезда:
-                <input type="date"><!--value="1 сентября 2023"-->
+                <input type="date" value="2023.09.01"> <!--Пробовала разные вариации value, но что-то не получается-->
               </label>
 
               <label>Взрослые:
