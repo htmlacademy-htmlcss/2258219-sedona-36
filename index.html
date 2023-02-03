@@ -31,7 +31,6 @@
       <!--SEDONA HERO-BLOCK aka INTRODUCTION-->
       <section class="sedona-introduction">
         <h1 class="visually-hidden">Добро пожаловать в Седону!</h1>
-        <img src="#" alt="Welcome to the gorgeous Sedona because the grand Canyon sucks!"> <!--only text(no bcg(no ladder))-->
         <b>Седона — небольшой городок в Аризоне,
           заслуживающий большего!</b>
         <p>Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
@@ -40,38 +39,41 @@
       <!--ADVANTAGES-->
       <section class="advantages">
         <h2 class="visually-hidden">Преимущества</h2>
-        <div class="advantages-item">
-          <h3>Настоящий городок</h3>
-          <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
-        </div>
 
-        <div class="advantages-item">
-          <img src="#" alt="Красивое заведение, окруженное природой">
-        </div>
+        <section>
+          <div class="advantages-item">
+            <h3>Настоящий городок</h3>
+            <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+          </div>
 
-        <div class="advantages-item">
-          <h3>Небольшая площадь</h3>
-          <p>Все достопримечательности находятся очень близко</p>
-        </div>
+            <img src="images/photo-1.jpg" width="800" height="384" alt="Красивое заведение, окруженное природой">
+        </section>
 
-        <div class="advantages-item">
-          <h3>Красивая дорога</h3>
-          <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
-        </div>
+        <ul class="advantages-item-list">
+          <li>
+            <h3>Небольшая площадь</h3>
+            <p>Все достопримечательности находятся очень близко</p>
+          </li>
 
-        <div class="advantages-item">
-          <h3>Мало туристов</h3>
-          <p>Большинство едет в Гранд Каньон и толпится там</p>
-        </div>
+          <li>
+            <h3>Красивая дорога</h3>
+            <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+          </li>
 
-        <div class="advantages-item">
-          <img src="#" alt="Каньон в Седоне">
-        </div>
+          <li>
+            <h3>Мало туристов</h3>
+            <p>Большинство едет в Гранд Каньон и толпится там</p>
+          </li>
+        </ul>
 
-        <div class="advantages-item">
-          <h3>Там есть мост дьявола</h3>
-          <p>Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
-        </div>
+        <section>
+          <img src="images/photo-2.jpg" width="800" height="385" alt="Каньон в Седоне">
+
+          <div class="advantages-item">
+            <h3>Там есть мост дьявола</h3>
+            <p>Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
+          </div>
+        </section>
       </section>
 
       <!--SERVICE-->
@@ -82,20 +84,22 @@
           <p>Опытный персонал и качественное обслуживание!</p>
         </div>
 
-        <div class="service-item service-item-lodging"><!--service-item-n::before bcg-img-->
-          <h3>Жильё</h3>
-          <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
-        </div>
+        <ul class="service-list">
+          <li class="service-item service-item-lodging"><!--service-item-n::before bcg-img-->
+            <h3>Жильё</h3>
+            <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+          </li>
 
-        <div class="service-item service-item-food">
-          <h3>Еда</h3>
-          <p>Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
-        </div>
+          <li class="service-item service-item-food">
+            <h3>Еда</h3>
+            <p>Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
+          </li>
 
-        <div class="service-item service-item-souvenir">
-          <h3>Сувениры</h3>
-          <p>Не только китайского, но и настоящего местного производства!</p>
-        </div>
+          <li class="service-item service-item-souvenir">
+            <h3>Сувениры</h3>
+            <p>Не только китайского, но и настоящего местного производства!</p>
+          </li>
+        </ul>
       </section>
 
       <!--HOTEL SEARCH-->
@@ -106,10 +110,10 @@
             предложения гостиниц в Седоне</p>
           <button class="button-base" type="button">Поиск гостиницы в Седоне</button>
 
-          <div class="hotel-search-form">
+          <form class="hotel-search-form" action="https://echo.htmlacademy.ru/" method="get"></form>
             <h2 class="visually-hidden">Поиск гостиницы в Седоне</h2>
             <button type="button"><span class="visually-hidden">Закрыть</span></button>
-            <form action="https://echo.htmlacademy.ru/" method="get">
+
               <label>Дата заезда:
                 <input type="date" value="2020-04-27" >
               </label>
@@ -126,10 +130,8 @@
               <button class="tooltip-button-information" type="button">Уточнение</button>
               <input type="number" id="child-count" min="0" step="1" value="2">
 
-
               <button class="button-base" type="submit">Найти</button>
-            </form>
-          </div>
+          </form>
       </section>
 
       <!--EMAIL SUBSCRIPTION-->
