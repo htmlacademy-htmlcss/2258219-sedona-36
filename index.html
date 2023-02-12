@@ -28,13 +28,16 @@
     </header>
 
     <!--MAIN CONTENT-->
-    <main class="main-index">
+    <main class="main-container main-index">
+    <div class="page-container">
       <!--SEDONA HERO-BLOCK aka INTRODUCTION-->
-      <section class="sedona-introduction block-comment">
+      <section class="sedona-introduction">
+      <div class="block-comment">
         <h1 class="visually-hidden">Добро пожаловать в Седону!</h1>
         <h3>Седона — небольшой городок в Аризоне,
           заслуживающий большего!</h3>
         <p>Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
+      </div>
       </section>
 
       <!--ADVANTAGES-->
@@ -86,17 +89,17 @@
         </div>
 
         <ul class="service-list">
-          <li class="service-item service-item-lodging"><!--service-item-n::before bcg-img-->
+          <li class="service-item service-item-lodging card"><!--service-item-n::before bcg-img-->
             <h3>Жильё</h3>
             <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
           </li>
 
-          <li class="service-item service-item-food">
+          <li class="service-item service-item-food card">
             <h3>Еда</h3>
             <p>Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
           </li>
 
-          <li class="service-item service-item-souvenir">
+          <li class="service-item service-item-souvenir card">
             <h3>Сувениры</h3>
             <p>Не только китайского, но и настоящего местного производства!</p>
           </li>
@@ -104,15 +107,16 @@
       </section>
 
       <!--HOTEL SEARCH-->
-      <section class="hotel-search block-comment">
+      <section class="hotel-search">
+        <div class="block-comment">
         <h2 class="visually-hidden">Поиск гостиницы</h2>
           <h3>Заинтересовались?</h3>
           <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие
             предложения гостиниц в Седоне</p>
           <button class="button-base button-brown" type="button">Поиск гостиницы в Седоне</button>
-
+        </div>
           <form class="hotel-search-form" action="https://echo.htmlacademy.ru/" method="get"></form>
-            <h2 class="visually-hidden">Поиск гостиницы в Седоне</h2>
+            <h3>Поиск гостиницы в Седоне</h3>
             <button type="button"><span class="visually-hidden">Закрыть</span></button>
 
               <label>Дата заезда:
@@ -136,19 +140,23 @@
       </section>
 
       <!--EMAIL SUBSCRIPTION-->
-      <section class="email-subscription block-comment">
+      <section class="email-subscription">
+      <div class="block-comment">
         <h3>Подпишитесь на рассылку</h3>
         <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form action="https://echo.htmlacademy.ru/" method="get">
           <input type="email" placeholder="Ваш e-mail" required>
           <button class="button-base" type="submit">Подписаться</button>
         </form>
+      </div>
       </section>
+    </div>
     </main>
 
     <!--FOOTER-->
     <footer class="page-footer">
-      <div class="socials">
+    <div class="page-footer-container">
+      <div class="page-footer-socials">
         <a href="#"><span class="visually-hidden">Вконтакте</span></a>
         <a href="#"><span class="visually-hidden">теллеграм</span></a>
         <a href="#"><span class="visually-hidden">Ютуб</span></a>
@@ -157,6 +165,7 @@
       <a href="tel:+78128121212">+7 (812) 812-12-12</a>
 
       <a href="#"><span class="visually-hidden">Сайт HTML Academy</span></a>
+    </div>
     </footer>
   </body>
 </html>

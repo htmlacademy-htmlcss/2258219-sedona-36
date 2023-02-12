@@ -18,11 +18,26 @@
 
 /*  Стили  */
 
+html{
+  height: 100%;
+}
+
 body{
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  margin: 0;
+
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 22px;
   line-height: 26px;
   font-weight: 400;
+}
+
+
+.page-header{
+  display: flex;
+
 }
 
 .page-header-nav a{
@@ -32,6 +47,32 @@ body{
   text-decoration: none;
   color: #000;
 }
+
+.main-container {
+  flex-grow: 1;
+}
+
+.page-container{
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.block-comment{
+  text-align: center;
+}
+
+.page-footer-container{
+  margin: 0 auto;
+  display: flex;
+  width: 1060px;
+  justify-content: space-between;
+}
+
+.page-footer-socials{
+  width: 142px;
+}
+
+/* Мы же можем задать размеры лого html-academy при вставлении изображения?*/
 
 .page-footer a{
   font-size: 40px;
@@ -48,12 +89,14 @@ body{
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
+  text-transform: uppercase;
 }
 
 .card h3{
   font-size: 24px;
   line-height: 28px;
   font-weight: 700;
+  text-transform: uppercase;
 }
 
 .card p{
@@ -108,6 +151,21 @@ body{
   background-image: url(../images/subscribe.jpg);
   background-size: 100% auto;
   background-repeat: no-repeat;
+  color: #fff;
+}
+
+.advantages-item-list{
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.service-list{
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
 /*Каталог*/
