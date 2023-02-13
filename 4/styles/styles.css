@@ -1,0 +1,293 @@
+
+/*  Подключение шрифтов   */
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("fonts/ptsans-400.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("fonts/ptsans-700.woff2") format("woff2");
+  font-display: swap;
+}
+
+/*  Стили  */
+
+html{
+  height: 100%;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  margin: 0;
+
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: 400;
+}
+
+
+.page-header-nav{
+  display: flex;
+  justify-content: space-between;
+
+  width: 1060px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.page-header-nav ul{
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.page-header-nav a{
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  text-decoration: none;
+  color: #000;
+}
+
+.main-container {
+  flex-grow: 1;
+}
+
+.page-container{
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.block-comment{
+  text-align: center;
+}
+
+.page-footer-container{
+  margin: 0 auto;
+  display: flex;
+  width: 1060px;
+  justify-content: space-between;
+}
+
+.page-footer-socials{
+  width: 142px;
+}
+
+/*задать размеры лого html-academy при вставлении изображения*/
+
+.page-footer a{
+  font-size: 40px;
+  line-height: 40px;
+  font-weight: 700;
+  text-decoration: none;
+  color: #000;
+}
+
+
+/*Общие настройки*/
+
+.block-comment h3{
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.card h3{
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.card p{
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 400;
+}
+
+.button-base.button-brown{
+  background-color: #756157;
+}
+
+.button-base{
+  font-size: 20px;
+  line-height: 36px;
+  font-weight: 400;
+  color: #fff;
+  background-color: #81B3D3;
+}
+
+
+/*  Главная страница  */
+
+.sedona-introduction{ /*   before/position  */
+  background-color: #81B3D3;
+  background-image: url(../images/index-background.jpg);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+
+.advantages-item.card{
+  background-color: rgba(130, 179, 211);
+  color: rgba(250, 250, 250);
+}
+
+.advantages-item-list li{
+  background-color: rgba(131, 179, 211, 0.2);
+}
+
+.advantages-item-list li:nth-child(2n+1){
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+.service-item:nth-child(2n+1){
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+.hotel-search-form .button-base{
+  background-color: #81B3D3;
+}
+.main-index .email-subscription{
+  background-image: url(../images/subscribe.jpg);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  color: #fff;
+}
+
+.advantages-item-list{
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.service-list{
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/*Каталог*/
+
+.section-container{
+  width: 1060px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.hotel-filter{
+  background-color: #81B3D3;
+  color: #fff;
+  background-image: url(../images/filter.jpg);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+
+.hotel-filter ul,ol{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.breadcrumbs{
+  display: flex;
+}
+
+.breadcrumbs a{
+  margin-right: 20px;
+
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 700;
+  text-decoration: none;
+  color: #fff;
+}
+
+.filter-form{
+  display: flex;
+
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+.filter-list-container{
+  display: flex;
+}
+
+.filter-list{
+  width: 150px;
+  margin-right: 70px;
+}
+
+.filter-list:last-child{
+  margin-right: 0;
+}
+
+.filter-button-container{
+  width: 550px;
+  margin-left: auto;
+}
+
+.control{
+  font-size: 18px;
+  line-height: 23px;
+  font-weight: 400;
+}
+
+/*Отели*/
+
+.hotel-catalog-header{
+  display: flex;
+  justify-content: space-between;
+}
+
+.hotel-card-container{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.hotel-card {
+  width: 340px;
+  margin-right: 20px;
+}
+
+.hotel-card:nth-child(3n) {
+  margin-right: 0;
+}
+
+.hotel-card a{
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+  text-decoration: none;
+  color: #000;
+}
+
+.hotel-card p, .hotel-card span{
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 400;
+}
+
+.pagination a{
+  text-decoration: none;
+}
+
+.pagination-current{
+  background-color: #f2f2f2;
+  text-decoration: none;
+  color: #000;
+}
