@@ -35,9 +35,20 @@ body{
 }
 
 
-.page-header{
+.page-header-nav{
   display: flex;
+  justify-content: space-between;
 
+  width: 1060px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.page-header-nav ul{
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .page-header-nav a{
@@ -245,6 +256,7 @@ body{
 
 .hotel-card-container{
   display: flex;
+  flex-wrap: wrap;
 }
 
 .hotel-card {
@@ -252,7 +264,7 @@ body{
   margin-right: 20px;
 }
 
-.hotel-card:last-child {
+.hotel-card:nth-child(3n) {
   margin-right: 0;
 }
 
