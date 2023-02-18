@@ -34,21 +34,37 @@ body{
   font-weight: 400;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 
+/*PAGE-HEADER*/
 .page-header-nav{
   display: flex;
-  justify-content: space-between;
 
   width: 1060px;
   margin: 0 auto;
   padding: 0;
 }
 
-.page-header-nav ul{
+.logo{
+  margin-right: 28px;
+}
+
+.page-nav-list{
   display: flex;
+  width: 445px;
   margin: 0;
   padding: 0;
   list-style: none;
+  flex-wrap: wrap;
 }
 
 .page-header-nav a{
@@ -59,6 +75,41 @@ body{
   color: #000;
 }
 
+.page-nav-list li{
+  padding: 20px 16px;
+}
+
+.page-header-buttons{
+  display: flex;
+  margin-left: auto;
+  align-items: center;
+}
+
+.page-header-search,
+.page-header-like{
+  min-width: 20px;
+  min-height: 20px;
+  padding: 22px 12px;
+}
+
+.like-count{
+  font-size: 10px;
+  line-height: 10px;
+  color:#fff;
+  padding: 5px;
+  bottom:12px;
+  left: 8px;
+
+  background-color: #6C9E42;
+  border-radius: 50%;
+}
+
+.page-header-buttons .button-brown{
+  padding: 8px 34px;
+}
+
+
+/*MAIN*/
 .main-container {
   flex-grow: 1;
 }
@@ -72,6 +123,8 @@ body{
   text-align: center;
 }
 
+/*FOOTER*/
+
 .page-footer-container{
   margin: 0 auto;
   display: flex;
@@ -80,7 +133,13 @@ body{
 }
 
 .page-footer-socials{
-  width: 142px;
+  width: 144px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.page-footer-socials a{
+  min-height: 40px;
+  min-width: 48px;
 }
 
 /*задать размеры лого html-academy при вставлении изображения*/
@@ -104,8 +163,11 @@ body{
 }
 
 .card{
-  width: 400px;
-  height: 384px;
+  padding: 0 85px;
+  width: 230px;
+  margin-top: auto;
+  margin-bottom: auto;
+  text-align: center;
 }
 
 .card h3{
@@ -126,11 +188,22 @@ body{
 }
 
 .button-base{
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 20px;
   line-height: 36px;
-  font-weight: 400;
+  font-weight: 700;
   color: #fff;
+  text-transform: uppercase;
   background-color: #81B3D3;
+  border:none;
+  border-radius: 4px;
+
+  padding: 8px 50px;
+}
+
+.button-small{
+  font-size: 16px;
+  line-height: 20px;
 }
 
 
@@ -158,10 +231,37 @@ body{
   padding: 0;
   margin: 0;
   list-style: none;
+  width: 1200px;
+}
+
+.advantages-item {
+  width: 400px;
+  height: 385px;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items:center;
+}
+
+.service-list{
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.service-item{
+  width: 400px;
+  height: 385px;
 }
 
 .service-item:nth-child(2n+1){
   background-color: rgba(131, 179, 211, 0.12);
+}
+
+.hotel-search-form{
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .hotel-search-form .button-base{
@@ -174,14 +274,6 @@ body{
   color: #fff;
 }
 
-
-
-.service-list{
-  display: flex;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
 
 /*Каталог*/
 

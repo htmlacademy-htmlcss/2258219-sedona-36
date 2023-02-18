@@ -10,8 +10,8 @@
     <!--PAGE HEADER-->
     <header class="page-header">
       <nav class="page-header-nav">
-        <ul>
-          <li><a href="#"><img src="images/logo.svg" alt="лого сайта Седона"></a></li>
+        <a href="#"><img class="logo" src="images/logo.svg" alt="лого сайта Седона" width="140" height="70"></a>
+        <ul class="page-nav-list">
           <li><a>Главная</a></li>
           <li><a href="#">О Седоне</a></li>
           <li><a href="catalog.html">Гостиницы</a></li>
@@ -24,8 +24,8 @@
 
           <button class="page-header-like " type="button">
             <span class="visually-hidden">Понравившееся</span>
-          </button><span>12</span><!-- pop-up: <ol><li>(hotels)</li><button><a>Посмотроть еще</a></button>-->
-          <button class="button-base button-brown" type="button">Хочу сюда!</button>
+          </button><span class="like-count">12</span><!-- pop-up: <ol><li>(hotels)</li><button><a>Посмотроть еще</a></button>-->
+          <button class="button-base button-brown button-small" type="button">Хочу сюда!</button>
         </div>
       </nav>
     </header>
@@ -61,19 +61,25 @@
             <img src="images/photo-1.jpg" width="800" height="385" alt="Красивое заведение, окруженное природой">
           </li>
 
-          <li class="advantages-item-square card">
-            <h3>Небольшая площадь</h3>
-            <p>Все достопримечательности находятся очень близко</p>
+          <li class="advantages-item advantages-item-square">
+            <div class="card">
+              <h3>Небольшая площадь</h3>
+              <p>Все достопримечательности находятся очень близко</p>
+            </div>
           </li>
 
-          <li class="advantages-item-road card">
-            <h3>Красивая дорога</h3>
-            <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+          <li class="advantages-item advantages-item-road">
+            <div class="card">
+              <h3>Красивая дорога</h3>
+              <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+            </div>
           </li>
 
-          <li class="advantages-item-tourist card">
-            <h3>Мало туристов</h3>
-            <p>Большинство едет в Гранд Каньон и толпится там</p>
+          <li class="advantages-item advantages-item-tourist">
+            <div class="card">
+              <h3>Мало туристов</h3>
+              <p>Большинство едет в Гранд Каньон и толпится там</p>
+            </div>
           </li>
 
           <li class="advantages-item-wide">
