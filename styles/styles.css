@@ -289,6 +289,8 @@ body{
   background-image: url(../images/filter.jpg);
   background-size: 100% auto;
   background-repeat: no-repeat;
+
+  padding: 35px 70px 70px 70px;
 }
 
 .hotel-filter ul,ol{
@@ -297,8 +299,14 @@ body{
   list-style: none;
 }
 
+.hotel-filter h1{
+  margin: 0;
+  margin-bottom: 8px;
+}
+
 .breadcrumbs{
   display: flex;
+  margin-bottom: 40px;
 }
 
 .breadcrumbs a{
@@ -311,8 +319,18 @@ body{
   color: #fff;
 }
 
+.breadcrumbs a:not(:last-child){
+  margin-right: 10px;
+}
+
+.href-main{
+  min-width: 13px;
+  min-height: 15px;
+}
+
 .filter-form{
   display: flex;
+  justify-content: space-between;
 
   font-size: 20px;
   line-height: 24px;
@@ -326,6 +344,8 @@ body{
 .filter-list{
   width: 150px;
   margin-right: 70px;
+
+  border: none;
 }
 
 .filter-list:last-child{
@@ -334,7 +354,30 @@ body{
 
 .filter-button-container{
   width: 550px;
-  margin-left: auto;
+
+
+  display: flex;
+}
+
+.range-price{
+  display: flex;
+  flex-direction: column;
+  width: 288px;
+  margin-right: 70px;
+}
+
+.filter-form-buttons{
+  margin-top: auto;
+}
+
+.filter-form-buttons button{
+  width: 191px;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.filter-form-buttons button:not(:last-child){
+  margin-bottom: 32px;
 }
 
 .control{
@@ -344,6 +387,10 @@ body{
 }
 
 /*Отели*/
+
+.hotel-catalog{
+  padding-top: 50px; /*Или лучше марджин фильтру?*/
+}
 
 .hotel-catalog-header{
   display: flex;
