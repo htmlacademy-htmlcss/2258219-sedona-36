@@ -400,11 +400,17 @@ body{
 .hotel-card-container{
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 80px; /*Потом стоит заменить на 40px ==> <hr>(/что-то подобное)+40px?*/
 }
 
 .hotel-card {
+  box-sizing: border-box;
   width: 340px;
   margin-right: 20px;
+  margin-bottom: 20px;
+  padding-top: 20px;
+  border: 1px solid #E6E6E6;
+  border-radius: 4px;
 }
 
 .hotel-card:nth-child(3n) {
@@ -458,8 +464,21 @@ body{
   min-width: 140px;
 }
 
+.pagination{
+  margin-bottom: 60px;
+}
+
 .pagination a{
   text-decoration: none;
+}
+
+.pagination-button{ /*Не нравится столько кода*/
+  display: inline-flex;
+  width: 60px;
+  height: 60px;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
 }
 
 .pagination-current{
