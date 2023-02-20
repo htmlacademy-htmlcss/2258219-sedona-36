@@ -7,12 +7,13 @@
     <base href="https://htmlacademy-htmlcss.github.io/2258219-sedona-36/4/">
 </head>
   <body>
-
     <!--PAGE HEADER-->
+    <h1 class="visually-hidden">Седона</h1>
     <header class="page-header">
       <nav class="page-header-nav">
-        <ul>
-          <li><a href="#"><img src="images/logo.svg" alt="лого сайта Седона"></a></li>
+        <h2 class="visually-hidden">Навигация</h2>
+        <a href="#"><img class="logo" src="images/logo.svg" alt="лого сайта Седона" width="140" height="70"></a>
+        <ul class="page-nav-list">
           <li><a>Главная</a></li>
           <li><a href="#">О Седоне</a></li>
           <li><a href="catalog.html">Гостиницы</a></li>
@@ -25,8 +26,8 @@
 
           <button class="page-header-like " type="button">
             <span class="visually-hidden">Понравившееся</span>
-          </button><span>12</span><!-- pop-up: <ol><li>(hotels)</li><button><a>Посмотроть еще</a></button>-->
-          <button class="button-base button-brown" type="button">Хочу сюда!</button>
+          </button><span class="like-count">12</span><!-- pop-up: <ol><li>(hotels)</li><button><a>Посмотроть еще</a></button>-->
+          <button class="button-base button-brown button-small" type="button">Хочу сюда!</button>
         </div>
       </nav>
     </header>
@@ -34,54 +35,63 @@
     <!--MAIN CONTENT-->
     <main class="main-container main-index">
     <div class="page-container">
+
       <!--SEDONA HERO-BLOCK aka INTRODUCTION-->
       <section class="sedona-introduction">
-      <div class="block-comment">
-        <h1 class="visually-hidden">Добро пожаловать в Седону!</h1>
-        <h3>Седона — небольшой городок в Аризоне,
-          заслуживающий большего!</h3>
-        <p>Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
-      </div>
+        <img src="images/index-background.jpg" alt="Горы Седоны" width="1200" height="485">
+        <!--<img src="images/welcome.svg" alt="Welcome to the gorgeuos Sedona q:because the Grand Canyon sucks" width="485" height="352">-->
+        <h2 class="visually-hidden">Добро пожаловать в Седону!</h2>
       </section>
 
       <!--ADVANTAGES-->
       <section class="advantages">
         <h2 class="visually-hidden">Преимущества</h2>
 
-        <section>
-          <div class="advantages-item card">
-            <h3>Настоящий городок</h3>
-            <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+          <div class="block-comment">
+            <h3>Седона — небольшой городок в Аризоне,
+              заслуживающий большего!</h3>
+            <p>Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
           </div>
 
-            <img src="images/photo-1.jpg" width="800" height="385" alt="Красивое заведение, окруженное природой">
-        </section>
-
         <ul class="advantages-item-list">
-          <li class="card">
-            <h3>Небольшая площадь</h3>
-            <p>Все достопримечательности находятся очень близко</p>
+          <li class="advantages-item-wide">
+            <div class="card">
+              <h3>Настоящий городок</h3>
+              <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+            </div>
+            <img src="images/photo-1.jpg" width="800" height="385" alt="Красивое заведение, окруженное природой">
           </li>
 
-          <li class="card">
-            <h3>Красивая дорога</h3>
-            <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+          <li class="advantages-item advantages-item-square">
+            <div class="card">
+              <h3>Небольшая площадь</h3>
+              <p>Все достопримечательности находятся очень близко</p>
+            </div>
           </li>
 
-          <li class="card">
-            <h3>Мало туристов</h3>
-            <p>Большинство едет в Гранд Каньон и толпится там</p>
+          <li class="advantages-item advantages-item-road">
+            <div class="card">
+              <h3>Красивая дорога</h3>
+              <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+            </div>
+          </li>
+
+          <li class="advantages-item advantages-item-tourist">
+            <div class="card">
+              <h3>Мало туристов</h3>
+              <p>Большинство едет в Гранд Каньон и толпится там</p>
+            </div>
+          </li>
+
+          <li class="advantages-item-wide">
+            <img src="images/photo-2.jpg" width="800" height="385" alt="Каньон в Седоне">
+            <div class="card">
+              <h3>Там есть мост дьявола</h3>
+              <p>Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
+            </div>
           </li>
         </ul>
 
-        <section>
-          <img src="images/photo-2.jpg" width="800" height="385" alt="Каньон в Седоне">
-
-          <div class="advantages-item card">
-            <h3>Там есть мост дьявола</h3>
-            <p>Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
-          </div>
-        </section>
       </section>
 
       <!--SERVICE-->
@@ -119,7 +129,7 @@
             предложения гостиниц в Седоне</p>
           <button class="button-base button-brown" type="button">Поиск гостиницы в Седоне</button>
         </div>
-          <form class="hotel-search-form" action="https://echo.htmlacademy.ru/" method="get"></form>
+          <form class="hotel-search-form" action="https://echo.htmlacademy.ru/" method="get">
             <h3>Поиск гостиницы в Седоне</h3>
             <button type="button"><span class="visually-hidden">Закрыть</span></button>
 
@@ -145,16 +155,19 @@
 
       <!--EMAIL SUBSCRIPTION-->
       <section class="email-subscription">
-      <div class="block-comment">
-        <h3>Подпишитесь на рассылку</h3>
-        <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
-        <form action="https://echo.htmlacademy.ru/" method="get">
-          <input type="email" placeholder="Ваш e-mail" required>
-          <button class="button-base" type="submit">Подписаться</button>
-        </form>
-      </div>
+        <div class="block-comment">
+          <h2 class="visually-hidden">Рассылка</h2>
+          <h3>Подпишитесь на рассылку</h3>
+          <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
+
+          <form action="https://echo.htmlacademy.ru/" method="get">
+            <input type="email" placeholder="Ваш e-mail" required>
+            <button class="button-base" type="submit">Подписаться</button>
+          </form>
+        </div>
       </section>
-    </div>
+
+      </div>
     </main>
 
     <!--FOOTER-->
