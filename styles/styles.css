@@ -389,12 +389,34 @@ body{
 /*Отели*/
 
 .hotel-catalog{
-  padding-top: 50px; /*Или лучше марджин фильтру?*/
+  padding-top: 50px;
 }
 
 .hotel-catalog-header{
   display: flex;
   justify-content: space-between;
+}
+
+.hotel-catalog-sorting{
+  display: flex;
+  align-items: center;
+}
+
+.select-sorting{
+  margin-right: 70px;
+}
+
+.catalog-sorting-menu{
+  margin-left: auto;
+}
+
+.sorting-menu-button{
+  min-width: 48px;
+  min-height: 48px;
+}
+
+.sorting-menu-button:not(:last-child){
+  margin-right: 8px;
 }
 
 .hotel-card-container{
