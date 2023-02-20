@@ -123,10 +123,14 @@ body{
   text-align: center;
 }
 
+.email-subscription{
+  padding:96px 258px 104px;
+}
+
 /*FOOTER*/
 
 .page-footer-container{
-  margin: 0 auto;
+  margin: 40px auto 30px;
   display: flex;
   width: 1060px;
   justify-content: space-between;
@@ -147,7 +151,7 @@ body{
 .page-footer a{
   font-size: 40px;
   line-height: 40px;
-  font-weight: 700;
+  font-weight: 400;
   text-decoration: none;
   color: #000;
 }
@@ -160,6 +164,11 @@ body{
   line-height: 36px;
   font-weight: 700;
   text-transform: uppercase;
+  margin:0;
+}
+
+.block-comment p{
+  margin-bottom:0;
 }
 
 .card{
@@ -175,12 +184,14 @@ body{
   line-height: 28px;
   font-weight: 700;
   text-transform: uppercase;
+  margin:0;
 }
 
 .card p{
   font-size: 18px;
   line-height: 21px;
   font-weight: 400;
+  margin:0;
 }
 
 .button-base.button-brown{
@@ -209,6 +220,10 @@ body{
 
 /*  Главная страница  */
 
+.advantages .block-comment{
+  padding: 69px 274px;
+  margin-bottom: 21px;
+}
 
 .advantages-item-wide{
   background-color: rgba(130, 179, 211);
@@ -243,6 +258,10 @@ body{
   align-items:center;
 }
 
+.service .block-comment{
+  padding: 64px 350px;
+}
+
 .service-list{
   display: flex;
   padding: 0;
@@ -264,9 +283,12 @@ body{
   background-color: rgba(131, 179, 211, 0.12);
 }
 
-.hotel-search-form{
-  display: flex;
-  flex-wrap: wrap;
+.hotel-search .block-comment{
+  padding: 96px 304px;
+}
+
+.hotel-search p{
+  margin-bottom: 54px;
 }
 
 .hotel-search-form .button-base{
@@ -307,6 +329,9 @@ body{
 .hotel-filter h2{
   margin: 0;
   margin-bottom: 8px;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 78px;
 }
 
 .breadcrumbs{
@@ -403,6 +428,10 @@ body{
 .hotel-catalog-header{
   display: flex;
   justify-content: space-between;
+}
+
+.hotel-catalog-name{
+  text-transform: uppercase;
 }
 
 .hotel-catalog-sorting{
