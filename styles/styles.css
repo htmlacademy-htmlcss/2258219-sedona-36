@@ -411,18 +411,51 @@ body{
   margin-right: 0;
 }
 
+.card-wrapper{
+  margin: 0 auto;
+  width: 300px;
+}
+
 .hotel-card a, .hotel-card h3{
   font-size: 24px;
   line-height: 28px;
   font-weight: 700;
   text-decoration: none;
   color: #000;
+
+  margin: 16px 0;
 }
 
 .hotel-card p, .hotel-card span{
   font-size: 18px;
   line-height: 21px;
   font-weight: 400;
+
+  margin: 0;
+}
+
+.hotel-card button{
+  padding: 8px 20px;
+}
+
+.hotel-card .button-liked{
+  background-color: #7DB54F;
+  padding: 8px 18px; /*Изменить на width кнопки с центрированием?*/
+}
+
+.hotel-information{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 21px 36px 37px;
+  gap: 16px 20px;
+}
+
+.hotel-information span:nth-child(2n+2){
+  text-align: end;
+}
+
+.hotel-star{
+  min-width: 140px;
 }
 
 .pagination a{
