@@ -6,10 +6,11 @@
     <link href="styles/styles.css" rel="stylesheet">
   </head>
   <body>
-
     <!--PAGE HEADER-->
+    <h1 class="visually-hidden">Седона</h1>
     <header class="page-header">
       <nav class="page-header-nav">
+        <h2 class="visually-hidden">Навигация</h2>
         <a href="#"><img class="logo" src="images/logo.svg" alt="лого сайта Седона" width="140" height="70"></a>
         <ul class="page-nav-list">
           <li><a>Главная</a></li>
@@ -33,19 +34,18 @@
     <!--MAIN CONTENT-->
     <main class="main-container main-index">
     <div class="page-container">
-      <!--SEDONA HERO-BLOCK aka INTRODUCTION-->
 
+      <!--SEDONA HERO-BLOCK aka INTRODUCTION-->
       <section class="sedona-introduction">
         <img src="images/index-background.jpg" alt="Горы Седоны" width="1200" height="485">
         <!--<img src="images/welcome.svg" alt="Welcome to the gorgeuos Sedona q:because the Grand Canyon sucks" width="485" height="352">-->
-        <h1 class="visually-hidden">Добро пожаловать в Седону!</h1>
+        <h2 class="visually-hidden">Добро пожаловать в Седону!</h2>
       </section>
 
       <!--ADVANTAGES-->
       <section class="advantages">
         <h2 class="visually-hidden">Преимущества</h2>
 
-        <section>
           <div class="block-comment">
             <h3>Седона — небольшой городок в Аризоне,
               заслуживающий большего!</h3>
@@ -128,7 +128,7 @@
             предложения гостиниц в Седоне</p>
           <button class="button-base button-brown" type="button">Поиск гостиницы в Седоне</button>
         </div>
-          <form class="hotel-search-form" action="https://echo.htmlacademy.ru/" method="get"></form>
+          <form class="hotel-search-form" action="https://echo.htmlacademy.ru/" method="get">
             <h3>Поиск гостиницы в Седоне</h3>
             <button type="button"><span class="visually-hidden">Закрыть</span></button>
 
@@ -154,16 +154,19 @@
 
       <!--EMAIL SUBSCRIPTION-->
       <section class="email-subscription">
-      <div class="block-comment">
-        <h3>Подпишитесь на рассылку</h3>
-        <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
-        <form action="https://echo.htmlacademy.ru/" method="get">
-          <input type="email" placeholder="Ваш e-mail" required>
-          <button class="button-base" type="submit">Подписаться</button>
-        </form>
-      </div>
+        <div class="block-comment">
+          <h2 class="visually-hidden">Рассылка</h2>
+          <h3>Подпишитесь на рассылку</h3>
+          <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
+
+          <form action="https://echo.htmlacademy.ru/" method="get">
+            <input type="email" placeholder="Ваш e-mail" required>
+            <button class="button-base" type="submit">Подписаться</button>
+          </form>
+        </div>
       </section>
-    </div>
+
+      </div>
     </main>
 
     <!--FOOTER-->
