@@ -253,6 +253,11 @@ body{
 .service-item{
   width: 400px;
   height: 385px;
+
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content: center;
 }
 
 .service-item:nth-child(2n+1){
@@ -368,12 +373,15 @@ body{
 
 .filter-form-buttons{
   margin-top: auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .filter-form-buttons button{
   width: 191px;
   font-size: 16px;
   line-height: 20px;
+  justify-self: end;
 }
 
 .filter-form-buttons button:not(:last-child){
