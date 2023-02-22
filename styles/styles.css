@@ -56,20 +56,21 @@ body{
 
 .logo{
   margin-right: 28px;
+  position: absolute;
+
 }
 
 .page-nav-list{
   display: flex;
-  width: 445px;
-  margin: 0;
+  max-width: 445px;
+  width: 100%;
+  margin: 0 170px;
   padding: 0;
   list-style: none;
   flex-wrap: wrap;
 }
 
 .page-header-nav a{
-  font-size: 20px;
-  line-height: 24px;
   font-weight: 700;
   text-decoration: none;
   color: #000;
@@ -77,6 +78,8 @@ body{
 
 .page-nav-list li{
   padding: 20px 16px;
+  line-height: 24px;
+  font-size: 20px;
 }
 
 .page-header-buttons{
@@ -119,15 +122,16 @@ body{
   margin: 0 auto;
 }
 
-.block-comment{
+/*FOOTER*/
+
+.email-subscription .block-comment{
+  min-height: 415px;
+}
+
+.email-subscription .block-comment-container{
+  max-width: 684px;
   text-align: center;
 }
-
-.email-subscription{
-  padding:96px 258px 104px;
-}
-
-/*FOOTER*/
 
 .page-footer-container{
   margin: 40px auto 30px;
@@ -137,7 +141,8 @@ body{
 }
 
 .page-footer-socials{
-  width: 144px;
+  max-width: 144px;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
 }
@@ -159,23 +164,32 @@ body{
 
 /*Общие настройки*/
 
-.block-comment h3{
+.block-comment{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.block-comment-container h3{
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
   text-transform: uppercase;
   margin:0;
+  text-align: center;
 }
 
-.block-comment p{
+.block-comment-container p{
   margin-bottom:0;
+  text-align: center;
 }
 
 .card{
   padding: 0 85px;
-  width: 230px;
-  margin-top: auto;
-  margin-bottom: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+
   text-align: center;
 }
 
@@ -221,8 +235,12 @@ body{
 /*  Главная страница  */
 
 .advantages .block-comment{
-  padding: 69px 274px;
   margin-bottom: 21px;
+  min-height: 261px;
+}
+
+.advantages .block-comment-container{
+  max-width: 651px;
 }
 
 .advantages-item-wide{
@@ -249,17 +267,19 @@ body{
   width: 1200px;
 }
 
-.advantages-item {
-  width: 400px;
-  height: 385px;
+.advantages-item.card {
   box-sizing: border-box;
-
-  display: flex;
-  align-items:center;
+  max-width: 400px;
+  width: 100%;
+  min-height: 385px;/*padding: 112.5px 85px;*/
 }
 
 .service .block-comment{
-  padding: 64px 350px;
+  min-height: 246px;
+}
+
+.service .block-comment-container{
+  max-width: 505px;
 }
 
 .service-list{
@@ -270,8 +290,9 @@ body{
 }
 
 .service-item{
-  width: 400px;
-  height: 385px;
+  max-width: 400px;
+  width: 100%;
+  min-height: 385px;
 
   display: flex;
   flex-direction: column;
@@ -284,7 +305,12 @@ body{
 }
 
 .hotel-search .block-comment{
-  padding: 96px 304px;
+  min-height: 406px;
+}
+
+.hotel-search .block-comment-container{
+  max-width: 684px;
+  text-align: center;
 }
 
 .hotel-search p{
@@ -372,7 +398,8 @@ body{
 }
 
 .filter-list{
-  width: 150px;
+  max-width: 150px;
+  width: 100%;
   margin-right: 70px;
 
   border: none;
@@ -383,8 +410,8 @@ body{
 }
 
 .filter-button-container{
-  width: 550px;
-
+  max-width: 550px;
+  width: 100%;
 
   display: flex;
 }
@@ -392,7 +419,8 @@ body{
 .range-price{
   display: flex;
   flex-direction: column;
-  width: 288px;
+  max-width: 288px;
+  width: 100%;
   margin-right: 70px;
 }
 
@@ -403,7 +431,8 @@ body{
 }
 
 .filter-form-buttons button{
-  width: 191px;
+  max-width: 191px;
+  width: 100%;
   font-size: 16px;
   line-height: 20px;
   justify-self: end;
@@ -464,7 +493,8 @@ body{
 
 .hotel-card {
   box-sizing: border-box;
-  width: 340px;
+  max-width: 340px;
+  width: 100%;
   margin-right: 20px;
   margin-bottom: 20px;
   padding-top: 20px;
@@ -478,7 +508,8 @@ body{
 
 .card-wrapper{
   margin: 0 auto;
-  width: 300px;
+  max-width: 300px;
+  width: 100%;
 }
 
 .hotel-card a, .hotel-card h3{
@@ -533,8 +564,9 @@ body{
 
 .pagination-button{ /*Не нравится столько кода*/
   display: inline-flex;
-  width: 60px;
-  height: 60px;
+  max-width: 60px;
+  width: 100%;
+  min-height: 60px;
   padding: 0;
   justify-content: center;
   align-items: center;
