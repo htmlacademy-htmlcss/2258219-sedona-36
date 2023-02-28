@@ -97,18 +97,6 @@ body{
 
 }
 
-.page-header-search{
-  background-image: url(../images/search.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.page-header-like{
-  background-image: url(../images/heart.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
 .like-count{
   font-size: 10px;
   line-height: 10px;
