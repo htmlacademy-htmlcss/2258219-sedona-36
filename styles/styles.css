@@ -100,14 +100,12 @@ body{
 .page-header-search{
   background-image: url(../images/search.svg);
   background-repeat: no-repeat;
-  background-size: 20px;
   background-position: center;
 }
 
 .page-header-like{
   background-image: url(../images/heart.svg);
   background-repeat: no-repeat;
-  background-size: 20px;
   background-position: center;
 }
 
@@ -314,10 +312,36 @@ body{
   flex-direction: column;
   align-items:center;
   justify-content: center;
+
+  position: relative;
 }
 
 .service-item:nth-child(2n+1){
   background-color: rgba(131, 179, 211, 0.12);
+}
+
+.service-item-lodging h3::before{
+  content: "";
+  background-image: url(../images/Advantage-icon-house.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.service-item-food h3::before{
+  content: "";
+  background-image: url(../images/Advantage-icon-burger.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #6C9E42;
+  position: absolute;
+
+}
+
+.service-item-souvenir h3::before{
+  content: "";
+  background-image: url(../images/Advantage-icon-gift.svg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .hotel-search .block-comment{
