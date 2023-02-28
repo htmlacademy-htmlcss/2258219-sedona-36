@@ -457,10 +457,13 @@ body{
 .hotel-catalog-header{
   display: flex;
   justify-content: space-between;
+  margin-bottom: 40px;
 }
 
 .hotel-catalog-name{
   text-transform: uppercase;
+  margin: 0;
+  align-self: center;
 }
 
 .hotel-catalog-sorting{
@@ -486,24 +489,20 @@ body{
 }
 
 .hotel-card-container{
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3,340px);
+  gap: 20px;
   margin-bottom: 80px; /*Потом стоит заменить на 40px ==> <hr>(/что-то подобное)+40px?*/
 }
 
 .hotel-card {
   box-sizing: border-box;
-  max-width: 340px;
-  width: 100%;
-  margin-right: 20px;
-  margin-bottom: 20px;
+
+
+
   padding-top: 20px;
   border: 1px solid #E6E6E6;
   border-radius: 4px;
-}
-
-.hotel-card:nth-child(3n) {
-  margin-right: 0;
 }
 
 .card-wrapper{
@@ -542,7 +541,7 @@ body{
 .hotel-information{
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 21px 36px 37px;
+  grid-template-rows: 21px 36px 37px;/*изменить*/
   gap: 16px 20px;
 }
 
