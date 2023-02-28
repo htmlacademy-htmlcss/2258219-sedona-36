@@ -90,9 +90,25 @@ body{
 
 .page-header-search,
 .page-header-like{
-  min-width: 20px;
-  min-height: 20px;
-  padding: 22px 12px;
+  min-width: 44px;
+  min-height: 64px;
+  border: none;
+  background-color: inherit;
+
+}
+
+.page-header-search{
+  background-image: url(../images/search.svg);
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-position: center;
+}
+
+.page-header-like{
+  background-image: url(../images/heart.svg);
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-position: center;
 }
 
 .like-count{
