@@ -1,0 +1,578 @@
+
+/*  Подключение шрифтов   */
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
+  font-display: swap;
+}
+
+/*  Стили  */
+
+html{
+  height: 100%;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  margin: 0;
+
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: 400;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/*PAGE-HEADER*/
+.page-header-nav{
+  display: flex;
+
+  width: 1060px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.logo{
+  margin-right: 28px;
+  position: absolute;
+
+}
+
+.page-nav-list{
+  display: flex;
+  max-width: 445px;
+  width: 100%;
+  margin: 0 170px;
+  padding: 0;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.page-header-nav a{
+  font-weight: 700;
+  text-decoration: none;
+  color: #000;
+}
+
+.page-nav-list li{
+  padding: 20px 16px;
+  line-height: 24px;
+  font-size: 20px;
+}
+
+.page-header-buttons{
+  display: flex;
+  margin-left: auto;
+  align-items: center;
+}
+
+.page-header-search,
+.page-header-like{
+  min-width: 20px;
+  min-height: 20px;
+  padding: 22px 12px;
+}
+
+.like-count{
+  font-size: 10px;
+  line-height: 10px;
+  color:#fff;
+  padding: 5px;
+  bottom:12px;
+  left: 8px;
+
+  background-color: #6C9E42;
+  border-radius: 50%;
+}
+
+.page-header-buttons .button-brown{
+  padding: 8px 34px;
+}
+
+
+/*MAIN*/
+.main-container {
+  flex-grow: 1;
+}
+
+.page-container{
+  width: 1200px;
+  margin: 0 auto;
+}
+
+/*FOOTER*/
+
+.email-subscription .block-comment{
+  min-height: 415px;
+}
+
+.email-subscription .block-comment-container{
+  max-width: 684px;
+  text-align: center;
+}
+
+.page-footer-container{
+  margin: 40px auto 30px;
+  display: flex;
+  width: 1060px;
+  justify-content: space-between;
+}
+
+.page-footer-socials{
+  max-width: 144px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.page-footer-socials a{
+  min-height: 40px;
+  min-width: 48px;
+}
+
+/*задать размеры лого html-academy при вставлении изображения*/
+
+.page-footer a{
+  font-size: 40px;
+  line-height: 40px;
+  font-weight: 400;
+  text-decoration: none;
+  color: #000;
+}
+
+
+/*Общие настройки*/
+
+.block-comment{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.block-comment-container h3{
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin:0;
+  text-align: center;
+}
+
+.block-comment-container p{
+  margin-bottom:0;
+  text-align: center;
+}
+
+.card{
+  padding: 0 85px;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+
+  text-align: center;
+}
+
+.card h3{
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin:0;
+}
+
+.card p{
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 400;
+  margin:0;
+}
+
+.button-base.button-brown{
+  background-color: #756157;
+}
+
+.button-base{
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 20px;
+  line-height: 36px;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  background-color: #81B3D3;
+  border:none;
+  border-radius: 4px;
+
+  padding: 8px 50px;
+}
+
+.button-small{
+  font-size: 16px;
+  line-height: 20px;
+}
+
+
+/*  Главная страница  */
+
+.advantages .block-comment{
+  margin-bottom: 21px;
+  min-height: 261px;
+}
+
+.advantages .block-comment-container{
+  max-width: 651px;
+}
+
+.advantages-item-wide{
+  background-color: rgba(130, 179, 211);
+  color: rgba(250, 250, 250);
+  display:flex;
+}
+
+.advantages-item-road{
+  background-color: rgba(131, 179, 211, 0.2);
+}
+
+.advantages-item-square,
+.advantages-item-tourist{
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+.advantages-item-list{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  width: 1200px;
+}
+
+.advantages-item.card {
+  box-sizing: border-box;
+  max-width: 400px;
+  width: 100%;
+  min-height: 385px;/*padding: 112.5px 85px;*/
+}
+
+.service .block-comment{
+  min-height: 246px;
+}
+
+.service .block-comment-container{
+  max-width: 505px;
+}
+
+.service-list{
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.service-item{
+  max-width: 400px;
+  width: 100%;
+  min-height: 385px;
+
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content: center;
+}
+
+.service-item:nth-child(2n+1){
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+.hotel-search .block-comment{
+  min-height: 406px;
+}
+
+.hotel-search .block-comment-container{
+  max-width: 684px;
+  text-align: center;
+}
+
+.hotel-search p{
+  margin-bottom: 54px;
+}
+
+.hotel-search-form .button-base{
+  background-color: #81B3D3;
+}
+.main-index .email-subscription{
+  background-image: url(../images/subscribe.jpg);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  color: #fff;
+}
+
+
+/*Каталог*/
+
+.section-container{
+  width: 1060px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.hotel-filter{
+  background-color: #81B3D3;
+  color: #fff;
+  background-image: url(../images/filter.jpg);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+
+  padding: 35px 70px 70px 70px;
+}
+
+.hotel-filter ul,ol{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.hotel-filter h2{
+  margin: 0;
+  margin-bottom: 8px;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 78px;
+}
+
+.breadcrumbs{
+  display: flex;
+  margin-bottom: 40px;
+}
+
+.breadcrumbs a{
+  margin-right: 20px;
+
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 700;
+  text-decoration: none;
+  color: #fff;
+}
+
+.breadcrumbs a:not(:last-child){
+  margin-right: 10px;
+}
+
+.href-main{
+  min-width: 13px;
+  min-height: 15px;
+}
+
+.filter-form{
+  display: flex;
+  justify-content: space-between;
+
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+.filter-list-container{
+  display: flex;
+}
+
+.filter-list{
+  max-width: 150px;
+  width: 100%;
+  margin-right: 70px;
+
+  border: none;
+}
+
+.filter-list:last-child{
+  margin-right: 0;
+}
+
+.filter-button-container{
+  max-width: 550px;
+  width: 100%;
+
+  display: flex;
+}
+
+.range-price{
+  display: flex;
+  flex-direction: column;
+  max-width: 288px;
+  width: 100%;
+  margin-right: 70px;
+}
+
+.filter-form-buttons{
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-form-buttons button{
+  max-width: 191px;
+  width: 100%;
+  font-size: 16px;
+  line-height: 20px;
+  justify-self: end;
+}
+
+.filter-form-buttons button:not(:last-child){
+  margin-bottom: 32px;
+}
+
+.control{
+  font-size: 18px;
+  line-height: 23px;
+  font-weight: 400;
+}
+
+/*Отели*/
+
+.hotel-catalog{
+  padding-top: 50px;
+}
+
+.hotel-catalog-header{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.hotel-catalog-name{
+  text-transform: uppercase;
+  margin: 0;
+  align-self: center;
+}
+
+.hotel-catalog-sorting{
+  display: flex;
+  align-items: center;
+}
+
+.select-sorting{
+  margin-right: 70px;
+}
+
+.catalog-sorting-menu{
+  margin-left: auto;
+}
+
+.sorting-menu-button{
+  min-width: 48px;
+  min-height: 48px;
+}
+
+.sorting-menu-button:not(:last-child){
+  margin-right: 8px;
+}
+
+.hotel-card-container{
+  display: grid;
+  grid-template-columns: repeat(3,340px);
+  gap: 20px;
+  margin-bottom: 80px; /*Потом стоит заменить на 40px ==> <hr>(/что-то подобное)+40px?*/
+}
+
+.hotel-card {
+  box-sizing: border-box;
+
+
+
+  padding-top: 20px;
+  border: 1px solid #E6E6E6;
+  border-radius: 4px;
+}
+
+.card-wrapper{
+  margin: 0 auto;
+  max-width: 300px;
+  width: 100%;
+}
+
+.hotel-card a, .hotel-card h3{
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+  text-decoration: none;
+  color: #000;
+
+  margin: 16px 0;
+}
+
+.hotel-card p, .hotel-card span{
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 400;
+
+  margin: 0;
+}
+
+.hotel-card button{
+  padding: 8px 20px;
+}
+
+.hotel-card .button-liked{
+  background-color: #7DB54F;
+  padding: 8px 18px; /*Изменить на width кнопки с центрированием?*/
+}
+
+.hotel-information{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 21px 36px 37px;/*изменить*/
+  gap: 16px 20px;
+}
+
+.hotel-information span:nth-child(2n+2){
+  text-align: end;
+}
+
+.hotel-star{
+  min-width: 140px;
+}
+
+.pagination{
+  margin-bottom: 60px;
+}
+
+.pagination a{
+  text-decoration: none;
+}
+
+.pagination-button{ /*Не нравится столько кода*/
+  display: inline-flex;
+  max-width: 60px;
+  width: 100%;
+  min-height: 60px;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination-current{
+  background-color: #f2f2f2;
+  text-decoration: none;
+  color: #000;
+}
