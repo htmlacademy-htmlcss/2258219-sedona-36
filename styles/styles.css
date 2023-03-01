@@ -210,9 +210,6 @@ body{
   margin:0;
 }
 
-.button-base.button-brown{
-  background-color: #756157;
-}
 
 .button-base{
   font-family: "PT Sans", Arial, sans-serif;
@@ -227,6 +224,44 @@ body{
 
   padding: 8px 50px;
 }
+
+.button-base:hover{
+  background-color: #68A2CA;
+  cursor: pointer;
+}
+
+.button-base:active{
+  background-color: #82B3D3;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.button-base:disabled{
+  background-color: #E5E5E5;
+  color: #fff;
+}
+
+.button-base:focus{
+  background-color: #68A2CA;
+  outline:none;
+}
+
+
+.button-base.button-brown{
+  background-color: #756157;
+}
+
+.button-base.button-brown:hover{
+  background-color: #615048;
+}
+
+.button-base.button-brown:active{
+  background-color: #756157;
+}
+
+.button-base.button-brown:focus{
+  background-color: #615048;
+}
+
 
 .button-small{
   font-size: 16px;
@@ -477,6 +512,29 @@ body{
   margin-bottom: 32px;
 }
 
+.button-reset{
+  background-color: rgba(130, 179, 211, 0);
+  color:#fff;
+}
+
+.button-reset:hover{
+  background-color: rgba(130, 179, 211, 0);
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.button-reset:active{
+  background-color: rgba(130, 179, 211, 0);
+  color: rgba(255, 255, 255, 0.3);
+  outline:none;
+}
+
+.button-reset:focus{
+  background-color: rgba(130, 179, 211, 0);
+  outline: 3px solid #83B3D3;
+  border-radius: 4px;
+  color:#fff;
+}
+
 .control{
   font-size: 18px;
   line-height: 23px;
@@ -585,7 +643,19 @@ body{
 
 .hotel-card .button-liked{
   background-color: #7DB54F;
-  padding: 8px 18px; /*Изменить на width кнопки с центрированием?*/
+  padding: 8px 18px;
+}
+
+.hotel-card .button-liked:hover{
+  background-color: #6C9E42;
+}
+
+.hotel-card .button-liked:active{
+  background-color: #7DB54F;
+}
+
+.hotel-card .button-liked:focus{
+  background-color: #6C9E42;
 }
 
 .hotel-information{
