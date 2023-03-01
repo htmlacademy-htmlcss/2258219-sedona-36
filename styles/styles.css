@@ -394,7 +394,7 @@ body{
 }
 
 .breadcrumbs a{
-  margin-right: 20px;
+  margin-right: 10px;
 
   font-size: 16px;
   line-height: 21px;
@@ -403,7 +403,14 @@ body{
   color: #fff;
 }
 
-.breadcrumbs a:not(:last-child){
+.breadcrumbs li:not(:last-child){
+  margin-right: 10px;
+}
+
+.breadcrumbs li::after:not(:last-child){
+  content: "";
+  background-image: url(../images/breadcrumbs.svg);
+  background-repeat: no-repeat;
   margin-right: 10px;
 }
 
@@ -516,6 +523,24 @@ body{
   margin-right: 8px;
 }
 
+.sort-tile{
+  background-image: url(../images/sort-tile.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.sort-big-block{
+  background-image: url(../images/sort-big-block.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.sort-list{
+  background-image: url(../images/sort-list.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .hotel-card-container{
   display: grid;
   grid-template-columns: repeat(3,340px);
@@ -525,9 +550,6 @@ body{
 
 .hotel-card {
   box-sizing: border-box;
-
-
-
   padding-top: 20px;
   border: 1px solid #E6E6E6;
   border-radius: 4px;
@@ -569,7 +591,6 @@ body{
 .hotel-information{
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 21px 36px 37px;/*изменить*/
   gap: 16px 20px;
 }
 
