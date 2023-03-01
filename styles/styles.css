@@ -94,7 +94,27 @@ body{
   min-height: 64px;
   border: none;
   background-color: inherit;
+  cursor: pointer;
+}
 
+.page-header-search{
+  background-image: url(../images/search.svg);
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-position: center;
+}
+
+.page-header-like{
+  background-image: url(../images/heart.svg);
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-position: center;
+  position: relative;
+}
+
+.page-header-search:focus,
+.page-header-like:focus{
+  outline:2px solid #68A2CA;
 }
 
 .like-count{
@@ -102,8 +122,9 @@ body{
   line-height: 10px;
   color:#fff;
   padding: 5px;
-  bottom:12px;
-  left: 8px;
+  position: absolute;
+  bottom:32px;
+  left: 20px;
 
   background-color: #6C9E42;
   border-radius: 50%;
@@ -433,7 +454,7 @@ body{
 
   font-size: 16px;
   line-height: 21px;
-  font-weight: 700;
+  font-weight: 400;
   text-decoration: none;
   color: #fff;
 }
@@ -454,13 +475,17 @@ body{
   min-height: 15px;
 }
 
+.breadcrumbs a:hover{
+  color: rgba(255, 255, 255, 0.3);
+}
+
 .filter-form{
   display: flex;
   justify-content: space-between;
 
   font-size: 20px;
   line-height: 24px;
-  font-weight: 400;
+  font-weight: 700;
 }
 
 .filter-list-container{
@@ -525,7 +550,6 @@ body{
 .button-reset:active{
   background-color: rgba(130, 179, 211, 0);
   color: rgba(255, 255, 255, 0.3);
-  outline:none;
 }
 
 .button-reset:focus{
@@ -566,6 +590,7 @@ body{
 
 .select-sorting{
   margin-right: 70px;
+  cursor: pointer;
 }
 
 .catalog-sorting-menu{
@@ -575,10 +600,26 @@ body{
 .sorting-menu-button{
   min-width: 48px;
   min-height: 48px;
+  border: 2px solid #E5E5E5;
+  border-radius: 4px;
+  background-color: inherit;
+  cursor: pointer;
 }
 
 .sorting-menu-button:not(:last-child){
   margin-right: 8px;
+}
+
+.sorting-menu-button:hover{
+  border-color: #000;
+}
+
+.sorting-menu-button:active{
+  border-color: #000;
+}
+
+.sorting-menu-button:focus{
+  border: 2px solid #68A2CA;
 }
 
 .sort-tile{
