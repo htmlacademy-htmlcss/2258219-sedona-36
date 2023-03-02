@@ -174,15 +174,53 @@ body{
   min-width: 48px;
 }
 
-/*задать размеры лого html-academy при вставлении изображения*/
-
 .page-footer a{
   font-size: 40px;
   line-height: 40px;
   font-weight: 400;
   text-decoration: none;
   color: #000;
+  outline:none;
 }
+/*
+.page-footer-socials svg:hover{
+  fill: #68A2CA;
+}
+
+.page-footer-socials svg:focus{
+  fill: #68A2CA;
+}
+
+.page-footer-socials svg:active{
+  fill: #68A2CA;
+  opacity: .3;
+}
+
+.page-footer a:hover{
+  fill:#756157;
+}
+
+.page-footer a:focus{
+  fill:#756157;
+}
+
+.page-footer a:active{
+  fill:#756157;
+  opacity: .3;
+}
+
+.page-footer a[href^="tel:"]:hover{
+  color:#756157;
+}
+
+.page-footer a[href^="tel:"]:focus{
+  color:#756157;
+}
+
+.page-footer a[href^="tel:"]:active{
+  color:#756157;
+  opacity: .3;
+}*/
 
 
 /*Общие настройки*/
@@ -540,14 +578,10 @@ body{
 .button-reset{
   background-color: rgba(130, 179, 211, 0);
   color:#fff;
+  outline:none;
 }
 
 .button-reset:hover{
-  background-color: rgba(130, 179, 211, 0);
-  color: rgba(255, 255, 255, 0.3);
-}
-
-.button-reset:active{
   background-color: rgba(130, 179, 211, 0);
   color: rgba(255, 255, 255, 0.3);
 }
@@ -557,6 +591,12 @@ body{
   outline: 3px solid #83B3D3;
   border-radius: 4px;
   color:#fff;
+}
+
+.button-reset:active{
+  background-color: rgba(130, 179, 211, 0);
+  color: rgba(255, 255, 255, 0.3);
+  outline: none;
 }
 
 .control{
