@@ -103,9 +103,10 @@ body{
 
 .page-header-search,
 .page-header-like{
-  min-width: 44px;
-  min-height: 64px;
-  border: none;
+  min-width: 42px;
+  min-height: 62px;
+  border: 2px solid rgba(130, 179, 211, 0);
+  border-radius: 4px;
   background-color: inherit;
   cursor: pointer;
   box-sizing: border-box;
@@ -117,7 +118,6 @@ body{
 
 .page-header-search:hover svg,
 .page-header-like:hover svg{
-
   opacity: .6;
 }
 
@@ -608,7 +608,7 @@ body{
   position: relative;
 }
 
-.breadcrumbs li::after/*:not(:last-child)*/{
+.breadcrumbs li::after/*:not()*/{
   content: "";
   background-image: url(../images/breadcrumbs.svg);
   background-repeat: no-repeat;
@@ -617,9 +617,11 @@ body{
   min-height: 20px;
   min-width: 8px;
   top: 5px;
-  left: 24px;
+  right: 10px;
 }
-
+.breadcrumbs li:last-child .breadcrumbs li::after{
+  content: none;
+}
 
 .href-home{
   min-width: 13px;
@@ -692,6 +694,8 @@ body{
   background-color: rgba(130, 179, 211, 0);
   color:#fff;
   outline:none;
+  box-sizing: border-box;
+  border: 3px solid rgba(130, 179, 211, 0);
 }
 
 .button-reset:hover{
