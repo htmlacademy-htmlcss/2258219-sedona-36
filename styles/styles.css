@@ -57,6 +57,7 @@ body{
 .logo{
   margin-right: 28px;
   position: absolute;
+  z-index: 1;
 }
 
 .page-nav-list{
@@ -172,6 +173,26 @@ body{
 .email-subscription .block-comment-container{
   max-width: 684px;
   text-align: center;
+}
+
+.subscription-form{
+  display: flex;
+  margin-top: 54px;
+}
+.email-field{
+  min-width: 452px;
+  padding: 14px 20px;
+
+  border-radius: 4px 0 0 4px;
+  border: none;
+
+  font-family: inherit;
+  color: rgba(250, 250, 250, .6);
+  background-color: #f2f2f2;
+}
+
+.subscription-form button{
+  border-radius: 0 4px 4px 0;
 }
 
 .page-footer-container{
@@ -362,7 +383,8 @@ body{
 .welcome-text{
   position: absolute;
   top: 51px;
-  left: 30.333%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .sedona-introduction::after{
@@ -491,7 +513,7 @@ body{
   top: 81px;
   left: 162.5px;
   min-width: 76px;
-  min-height: 72px;
+  min-height: 76px;
 
   background-image: url(../images/advantage-icon-house.svg);
   background-repeat: no-repeat;
@@ -508,7 +530,7 @@ body{
   top: 81px;
   left: 162.5px;
   min-width: 76px;
-  min-height: 72px;
+  min-height: 76px;
 
   background-image: url(../images/advantage-icon-burger.svg);
   background-repeat: no-repeat;
@@ -525,7 +547,7 @@ body{
   top: 81px;
   left: 162.5px;
   min-width: 76px;
-  min-height: 72px;
+  min-height: 76px;
 
   background-image: url(../images/advantage-icon-gift.svg);
   background-repeat: no-repeat;
