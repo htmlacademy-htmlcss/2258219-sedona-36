@@ -708,8 +708,7 @@ body{
   color: #fff;
 }
 
-.breadcrumbs li:not(:last-child){
-
+.breadcrumbs li{
   position: relative;
 }
 
@@ -750,12 +749,82 @@ body{
   display: flex;
 }
 
+/*FILTER-LIST*/
+
 .filter-list{
+  margin:0;
+  padding:0;
+  border: none;
+
   max-width: 150px;
   width: 100%;
   margin-right: 70px;
+}
 
-  border: none;
+.filter-list legend,
+.range-price legend{
+  margin-bottom: 32px;
+}
+
+.control{
+  font-size: 18px;
+  line-height: 23px;
+  font-weight: 400;
+  position: relative;
+  display:block;
+  padding-left: 36px;
+  margin-bottom: 16px;
+}
+
+.control-mark {
+  position:absolute;
+  top:2px;
+  left:0;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.control-input[type="radio"] + .control-mark {
+  border-radius: 50%;
+}
+
+.control:hover{
+  opacity: .6;
+}
+
+.control-input:focus{
+  opacity: 1;
+}
+
+.control-input:focus + .control-mark{
+  outline: 3px solid #83B3D3;
+}
+
+.control:active{
+  opacity: .3;
+}
+
+.control-input[type="checkbox"]:checked + .control-mark::after{
+  content: "";
+  position:absolute;
+  top: 5px;
+  left:4px;
+  width: 13px;
+  height: 11px;
+  background-image: url(../images/check-mark.svg);
+}
+
+.control-input[type="radio"]:checked + .control-mark::after{
+  content: "";
+  position:absolute;
+  top: 5px;
+  left:5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #3F5E72;
 }
 
 .filter-list:last-child{
@@ -769,12 +838,96 @@ body{
   display: flex;
 }
 
+/*RANGE*/
+
 .range-price{
   display: flex;
   flex-direction: column;
   max-width: 288px;
   width: 100%;
   margin-right: 70px;
+  border: none;
+}
+
+.input-price-wrapper{
+  margin-bottom: 36px;
+  display: flex;
+  gap: 2px;
+}
+
+.input-price{
+  background-color: #F2F2F2;
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 12px 20px;
+
+  color: rgba(0, 0, 0, 0.3)
+}
+
+.input-min-wrapper{
+  border-radius: 5px 0 0 5px;
+}
+
+.input-max-wrapper{
+  border-radius: 0 5px 5px 0;
+}
+
+.input-price-field{
+
+  max-width: 143px;
+
+  font: inherit;
+  background-color: transparent;
+  border: none;
+}
+
+.range-scale{
+  position: relative;
+  width: 100%;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.range-bar{
+  position: absolute;
+  height: 4px;
+  background-color: #fff;
+}
+
+.range-toggle{
+  position:absolute;
+  width: 20px;
+  height: 20px;
+  border:none;
+  border-radius: 5px;
+  background: #fff;
+  cursor: pointer;
+}
+
+.toggle-min{
+  top: -7px;
+  left:0;
+}
+
+.toggle-max{
+  top: -7px;
+  left:206px;
+}
+
+.range-toggle:focus{
+  outline:3px solid #83B3D3;
+}
+
+.range-toggle:active{
+  outline: 2px solid #83B3D3;
+}
+
+.range-input::-webkit-outer-spin-button,
+.range-input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
 }
 
 .filter-form-buttons{
@@ -815,12 +968,6 @@ body{
 .button-reset:active{
   background-color: rgba(130, 179, 211, 0);
   color: rgba(255, 255, 255, 0.3);
-}
-
-.control{
-  font-size: 18px;
-  line-height: 23px;
-  font-weight: 400;
 }
 
 /*Отели*/

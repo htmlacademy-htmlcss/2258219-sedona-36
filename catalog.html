@@ -72,21 +72,24 @@
             <ul>
               <li>
                 <label class="control">
-                  <input type="checkbox" name="pool" checked>
+                  <input class="control-input visually-hidden" type="checkbox" name="pool" checked>
+                  <span class="control-mark"></span>
                   Бассейн
                 </label>
               </li>
 
               <li>
                 <label class="control">
-                  <input type="checkbox" name="parking" checked>
+                  <input class="control-input visually-hidden" type="checkbox" name="parking" checked>
+                  <span class="control-mark"></span>
                   Парковка
                 </label>
               </li>
 
               <li>
                 <label class="control">
-                  <input type="checkbox" name="wi-fi">
+                  <input class="control-input visually-hidden" type="checkbox" name="wi-fi">
+                  <span class="control-mark"></span>
                   Wi-Fi
                 </label>
               </li>
@@ -98,21 +101,24 @@
             <ul>
               <li>
                 <label class="control">
-                  <input type="radio" name="lodging" value="hotel" checked>
+                  <input class="control-input visually-hidden" type="radio" name="lodging" value="hotel" checked>
+                  <span class="control-mark"></span>
                   Гостиница
                 </label>
               </li>
 
               <li>
                 <label class="control">
-                  <input type="radio" name="lodging" value="motel">
+                  <input class="control-input visually-hidden" type="radio" name="lodging" value="motel">
+                  <span class="control-mark"></span>
                   Мотель
                 </label>
               </li>
 
               <li>
                 <label class="control">
-                  <input type="radio" name="lodging" value="apartment">
+                  <input class="control-input visually-hidden" type="radio" name="lodging" value="apartment">
+                  <span class="control-mark"></span>
                   Апартаменты
                 </label>
               </li>
@@ -122,9 +128,35 @@
 
           <div class="filter-button-container">
 
-          <label class="control range-price"> Стоимость, ₽:
-              <input type="range" min="0" value="9000"> <!--something with output-->
-          </label>
+            <fieldset class="range-price">
+              <legend> Стоимость, ₽:</legend>
+                <div class="input-price-wrapper">
+                  <label class="input-min-wrapper input-price">
+                    <input class="input-price-field" type="number" min="0" value="0" name="min-price">
+                    от
+                  </label>
+
+                  <label class="input-max-wrapper input-price">
+                    <input class="input-price-field" type="number" max="10000" value="9000" name="max-price">
+                    до
+                  </label>
+                </div>
+
+                <div>
+                  <div class="range-scale">
+                    <div class="range-bar" style="left:0;">
+                      <button class="range-toggle toggle-min">
+                        <span class="visually-hidden">Изменить минимальную цену.</span>
+                      </button>
+
+                      <button class="range-toggle toggle-max">
+                        <span class="visually-hidden">Изменить максимальную цену.</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+            </fieldset>
 
           <div class="filter-form-buttons">
           <button class="button-base" type="submit">Применить</button>
