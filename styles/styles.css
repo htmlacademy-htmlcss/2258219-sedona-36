@@ -106,11 +106,11 @@ body{
 .page-header-like{
   min-width: 42px;
   min-height: 62px;
-  border: 2px solid rgba(130, 179, 211, 0);
   border-radius: 4px;
   background-color: inherit;
   cursor: pointer;
   box-sizing: border-box;
+  border:none;
 }
 
 .page-header-like{
@@ -124,9 +124,8 @@ body{
 
 .page-header-search:focus,
 .page-header-like:focus{
-  border:2px solid #000;
+  outline:2px solid #000;
   border-radius: 4px;
-  outline: none;
 }
 
 .page-header-search:active svg,
@@ -229,10 +228,7 @@ body{
   fill:#83B3D3;
 }
 
-.page-footer-socials a:hover svg{
-  fill: #68A2CA;
-}
-
+.page-footer-socials a:hover svg,
 .page-footer-socials a:focus svg{
   fill: #68A2CA;
 }
@@ -242,10 +238,7 @@ body{
   opacity: .3;
 }
 
-.page-footer a:hover{
-  color:#756157;
-}
-
+.page-footer a:hover,
 .page-footer a:focus{
   color:#756157;
 }
@@ -255,11 +248,8 @@ body{
   opacity: .3;
 }
 
-.academy-logo:hover svg{
-  fill:#756157;
-}
-
-.academy-logo:focus svg {
+.academy-logo:hover svg,
+.academy-logo:focus svg{
   fill:#756157;
 }
 
@@ -567,9 +557,102 @@ body{
   margin-bottom: 54px;
 }
 
+.hotel-search-form{
+  padding: 64px 70px;
+  border-radius: 30px;
+  width: max-content;
+}
+
+.search-form-header{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 64px;
+  text-transform: uppercase;
+}
+
+.button-close{
+  min-width: 52px;
+  background-color: #F2F2F2;
+  border-radius: 100%;
+  border: none;
+}
+
+.hotel-form-wrapper{
+  display: grid;
+  /*width: 577*/
+  grid-template-columns: 120px 110px 62px 112px 110px;
+  gap: 48px 18px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.hotel-form-wrapper label{
+  align-self: center;
+}
+
+.form-field{
+  font-family: inherit;
+  font-weight: 700;
+  background-color: #F2F2F2;
+  border-radius: 4px;
+  border: none;
+  padding: 12px 20px;
+}
+
+.form-date{
+  grid-column: 1/2;
+}
+.form-date-field{
+  grid-column: 2/-1;
+}
+
+.date-comment{
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 400;
+  padding: 20px;
+}
+.form-arrival-date{
+  position: relative;
+}
+.arrival-date-comment{
+  /*position: absolute;
+  top: 16px;
+  left: 24px;*/
+  color:#FF5757;
+}
+.form-departure-date{
+  position: relative;
+}
+.departure-date-comment{
+  /*position: absolute;
+  top: 16px;
+  left: 24px;*/
+  color: #333333;
+}
+
+.adult-count{
+ grid-column: 1/2;
+}
+.adult-count-field{
+  grid-column: 2/3;
+}
+.child-count{
+  grid-column: 4/5;
+  display: flex;
+}
+.child-count-field{
+  grid-column: 5/6;
+}
+
 .hotel-search-form .button-base{
   background-color: #81B3D3;
+  width: 100%;
+  grid-column: 1/-1;
 }
+
 .main-index .email-subscription{
   background-image: url(../images/subscribe.jpg);
   background-size: 100% auto;
@@ -630,7 +713,7 @@ body{
   position: relative;
 }
 
-.breadcrumbs li::after/*:not()*/{
+.breadcrumbs li::after{
   content: "";
   background-image: url(../images/breadcrumbs.svg);
   background-repeat: no-repeat;
@@ -715,19 +798,16 @@ body{
 .button-reset{
   background-color: rgba(130, 179, 211, 0);
   color:#fff;
-  outline:none;
-  box-sizing: border-box;
-  border: 3px solid rgba(130, 179, 211, 0);
 }
 
 .button-reset:hover{
   background-color: rgba(130, 179, 211, 0);
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .button-reset:focus{
   background-color: rgba(130, 179, 211, 0);
-  border: 3px solid #83B3D3;
+  outline: 3px solid #83B3D3;
   border-radius: 4px;
   color:#fff;
 }
@@ -735,7 +815,6 @@ body{
 .button-reset:active{
   background-color: rgba(130, 179, 211, 0);
   color: rgba(255, 255, 255, 0.3);
-  outline: none;
 }
 
 .control{
@@ -800,7 +879,6 @@ body{
   border: 2px solid #000;
   opacity: .3;
 }
-
 
 .catalog-sorting-menu{
   margin-left: auto;
@@ -903,16 +981,13 @@ body{
   padding: 8px 18px;
 }
 
-.hotel-card .button-liked:hover{
+.hotel-card .button-liked:hover,
+.hotel-card .button-liked:focus{
   background-color: #6C9E42;
 }
 
 .hotel-card .button-liked:active{
   background-color: #7DB54F;
-}
-
-.hotel-card .button-liked:focus{
-  background-color: #6C9E42;
 }
 
 .hotel-information{
@@ -982,17 +1057,11 @@ body{
   color: #000;
 }
 
-.pagination-current:hover{
+.pagination-current:hover,
+.pagination-current:focus,
+.pagination-current:active{
   background-color: #f2f2f2;
   cursor: default;
-}
-
-.pagination-current:focus{
-  background-color: #f2f2f2;
   outline: none;
-}
-
-.pagination-current:active{
   color:#000;
-  background-color: #f2f2f2;
 }

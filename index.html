@@ -138,26 +138,35 @@
           </div>
         </div>
           <form class="hotel-search-form" action="https://echo.htmlacademy.ru/" method="get">
-            <h3>Поиск гостиницы в Седоне</h3>
-            <button type="button"><span class="visually-hidden">Закрыть</span></button>
+            <header class="search-form-header">
+              <h3>Поиск гостиницы в Седоне</h3>
+              <button class="button-close" type="button"><span class="visually-hidden">Закрыть</span></button>
+            </header>
 
-              <label>Дата заезда:
-                <input type="date" value="2020-04-27" >
-              </label>
+            <div class="hotel-form-wrapper">
+                <legend class="visually-hidden">Настройка даты</legend>
+                <label class="form-date form-arrival-date" for="arrival-date">Дата Заезда:</label>
+                  <input class="form-date-field form-field" type="date" id="arrival-date" value="2020-04-27">
+                  <span class="arrival-date-comment date-comment">Мы не можем отправить вас в прошлое.</span>
 
-              <label>Дата выезда:
-                <input type="date" value="2023-09-01">
-              </label>
 
-              <label>Взрослые:
-                <input type="number" min="1" step="1" value="2">
-              </label>
+                <label class="form-date form-departure-date" for="departure-date">Дата Выезда:</label>
+                  <input class="form-date-field form-field" type="date" id="departure-date" value="2023-09-01">
+                  <span class="departure-date-comment date-comment">На эти даты есть свободные номера. Пока есть.</span>
 
-              <label for="child-count">Дети:</label>
-              <button class="tooltip-button-information" type="button">Уточнение</button>
-              <input type="number" id="child-count" min="0" step="1" value="2">
+
+                <legend class="visually-hidden">Настройка количества людей</legend>
+                <label class="adult-count" for="adult-count">Взрослые:</label>
+                <input class="count-field form-field" type="number" id="adult-count" min="1" step="1" value="2">
+
+
+                <label class="child-count" for="child-count"><span>Дети:</span>
+                  <button class="tooltip-button-information" type="button"><span class="visually-hidden">Уточнение</span></button>
+                </label>
+                <input class="count-field form-field" type="number" id="child-count" min="0" step="1" value="2">
 
               <button class="button-base" type="submit">Найти</button>
+            </div>
           </form>
       </section>
 
