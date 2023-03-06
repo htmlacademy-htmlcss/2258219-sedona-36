@@ -557,6 +557,8 @@ body{
   margin-bottom: 54px;
 }
 
+
+/*HOTEL-SEARCH-FORM*/
 .hotel-search-form{
   padding: 64px 70px;
   border-radius: 30px;
@@ -570,11 +572,38 @@ body{
   text-transform: uppercase;
 }
 
+.search-form-header h3{
+  margin:0;
+  align-self: center;
+}
+
 .button-close{
+  position: relative;
   min-width: 52px;
+  min-height: 52px;
   background-color: #F2F2F2;
   border-radius: 100%;
   border: none;
+  transform: translateX(15.7px);
+}
+
+.button-close::before,
+.button-close::after{
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 1.5px;
+  top: 25px;
+  left: 18px;
+  background-color: #000;
+}
+
+.button-close::before{
+  transform: rotate(45deg);
+}
+
+.button-close::after{
+  transform: rotate(-45deg);
 }
 
 .hotel-form-wrapper{
@@ -586,6 +615,7 @@ body{
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
+  position: relative;
 }
 
 .hotel-form-wrapper label{
@@ -615,21 +645,19 @@ body{
   padding: 20px;
 }
 .form-arrival-date{
-  position: relative;
+
 }
 .arrival-date-comment{
-  /*position: absolute;
-  top: 16px;
-  left: 24px;*/
+  position: absolute;
+  top: 24px;
+  left: 137px;
   color:#FF5757;
 }
-.form-departure-date{
-  position: relative;
-}
+
 .departure-date-comment{
-  /*position: absolute;
-  top: 16px;
-  left: 24px;*/
+  position: absolute;
+  top: 114px;
+  left: 137px;
   color: #333333;
 }
 
@@ -806,6 +834,10 @@ body{
   opacity: .3;
 }
 
+.control-input:disabled, .control-input:disabled + .control-mark{
+  opacity: .3;
+}
+
 .control-input[type="checkbox"]:checked + .control-mark::after{
   content: "";
   position:absolute;
@@ -864,6 +896,19 @@ body{
   padding: 12px 20px;
 
   color: rgba(0, 0, 0, 0.3)
+}
+
+.input-price:hover,
+.input-price:focus{
+  background-color: #E6E6E6;
+}
+
+.input-price:focus{
+  outline: 3px solid #83B3D3;
+}
+
+.input-price:active{
+  outline: 2px solid #000000;
 }
 
 .input-min-wrapper{
