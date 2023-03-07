@@ -193,6 +193,9 @@ body{
 .subscription-form button{
   border-radius: 0 4px 4px 0;
 }
+.email-field:focus + button{
+  outline: 3px solid #83B3D3;
+}
 
 .page-footer-container{
   margin: 40px auto 30px;
@@ -606,6 +609,19 @@ body{
   transform: rotate(-45deg);
 }
 
+.button-close:hover{
+  background-color: #E6E6E6;
+}
+
+.button-close:focus{
+  background-color: #E6E6E6;
+  outline: 3px solid #83B3D3;
+}
+
+.button-close:active{
+  opacity: 0.3;
+}
+
 .hotel-form-wrapper{
   display: grid;
   /*width: 577*/
@@ -631,11 +647,43 @@ body{
   padding: 12px 20px;
 }
 
+.form-field:placeholder-shown,
+.email-field:placeholder-shown{
+  color: rgba(0, 0, 0, 0.6)
+}
+
+.form-field:not(:placeholder-shown),
+.email-field:not(:placeholder-shown){
+  color:#000
+}
+
+.form-field:hover,
+.email-field:hover{
+  background-color: #E6E6E6;
+}
+
+.form-field:focus,
+.email-field:focus{
+  background-color: #E6E6E6;
+  outline: 3px solid #83B3D3;
+}
+
+.form-field:hover:not(:placeholder-shown),
+.email-field:hover:not(:placeholder-shown){
+  background-color: #E6E6E6;
+  outline: 2px solid #000000;
+}
+
 .form-date{
   grid-column: 1/2;
 }
 .form-date-field{
   grid-column: 2/-1;
+
+  appearance: none;
+  background-image: url(../images/date.svg);
+  background-repeat: no-repeat;
+  background-position: right 20px center;
 }
 
 .date-comment{
@@ -644,17 +692,15 @@ body{
   font-weight: 400;
   padding: 20px;
 }
-.form-arrival-date{
 
-}
-.arrival-date-comment{
+.wrong-date-comment{
   position: absolute;
   top: 24px;
   left: 137px;
   color:#FF5757;
 }
 
-.departure-date-comment{
+.normal-comment{
   position: absolute;
   top: 114px;
   left: 137px;
@@ -669,10 +715,35 @@ body{
 }
 .child-count{
   grid-column: 4/5;
-  display: flex;
 }
 .child-count-field{
   grid-column: 5/6;
+}
+
+
+.tooltip-button-information{
+  min-width: 26px;
+  min-height: 26px;
+  border: none;
+  border-radius: 50%;
+  background-color: #83B3D3;
+  background-image: url(../images/information.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+
+  position: absolute;
+  right: 155px;
+  bottom: 105px;
+}
+
+.tooltip-button-information:hover,
+.tooltip-button-information:focus{
+  background-color: #68A2CA;
+}
+
+.tooltip-button-information:active{
+  background-color: #82B3D3;
+  opacity: .3;
 }
 
 .hotel-search-form .button-base{
@@ -873,18 +944,20 @@ body{
 /*RANGE*/
 
 .range-price{
+  border: none;
+  padding: 0;
+  margin: 0;
   display: flex;
   flex-direction: column;
   max-width: 288px;
   width: 100%;
   margin-right: 70px;
-  border: none;
 }
 
 .input-price-wrapper{
   margin-bottom: 36px;
   display: flex;
-  gap: 2px;
+  justify-content: space-between;
 }
 
 .input-price{
@@ -893,7 +966,7 @@ body{
   align-items: center;
   max-width: 100%;
   box-sizing: border-box;
-  padding: 12px 20px;
+  padding: 12px 12px 12px 20px;
 
   color: rgba(0, 0, 0, 0.3)
 }
@@ -920,9 +993,7 @@ body{
 }
 
 .input-price-field{
-
-  max-width: 143px;
-
+  max-width: 85px;
   font: inherit;
   background-color: transparent;
   border: none;

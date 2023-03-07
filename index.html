@@ -146,13 +146,13 @@
             <div class="hotel-form-wrapper">
                 <legend class="visually-hidden">Настройка даты</legend>
                 <label class="form-date form-arrival-date" for="arrival-date">Дата Заезда:</label>
-                  <input class="form-date-field form-field" type="date" id="arrival-date" value="2020-04-27">
-                  <span class="arrival-date-comment date-comment">Мы не можем отправить вас в прошлое.</span>
+                  <input class="form-date-field form-field" type="date" id="arrival-date" placeholder="Укажите дату" value="2020-04-27">
+                  <span class="wrong-date-comment date-comment">Мы не можем отправить вас в прошлое.</span>
 
 
                 <label class="form-date form-departure-date" for="departure-date">Дата Выезда:</label>
-                  <input class="form-date-field form-field" type="date" id="departure-date" value="2023-09-01">
-                  <span class="departure-date-comment date-comment">На эти даты есть свободные номера. Пока есть.</span>
+                  <input class="form-date-field form-field" type="date" id="departure-date" placeholder="Укажите дату" value="2023-09-01">
+                  <span class="normal-comment date-comment">На эти даты есть свободные номера. Пока есть.</span>
 
 
                 <legend class="visually-hidden">Настройка количества людей</legend>
@@ -160,9 +160,8 @@
                 <input class="count-field form-field" type="number" id="adult-count" min="1" step="1" value="2">
 
 
-                <label class="child-count" for="child-count"><span>Дети:</span>
-                  <button class="tooltip-button-information" type="button"><span class="visually-hidden">Уточнение</span></button>
-                </label>
+                <label class="child-count" for="child-count"><span>Дети:</span></label>
+                <button class="tooltip-button-information" type="button"><span class="visually-hidden">Уточнение</span></button>
                 <input class="count-field form-field" type="number" id="child-count" min="0" step="1" value="2">
 
               <button class="button-base" type="submit">Найти</button>
