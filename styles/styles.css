@@ -55,7 +55,6 @@ body{
 }
 
 .logo{
-  margin-right: 28px;
   position: absolute;
   z-index: 1;
 }
@@ -82,6 +81,15 @@ body{
   font-size: 20px;
 }
 
+.page-header-nav a:hover{
+  opacity: .6;
+}
+
+.page-header-nav a:active{
+  opacity: .3;
+  border-bottom: 2px solid #756257;
+}
+
 .page-current{
   position: relative;
 }
@@ -104,16 +112,14 @@ body{
 
 .page-header-search,
 .page-header-like{
-  min-width: 42px;
-  min-height: 62px;
+  min-width: 44px;
+  min-height: 64px;
   border-radius: 4px;
   background-color: inherit;
   cursor: pointer;
   box-sizing: border-box;
   border:none;
-}
 
-.page-header-like{
   position: relative;
 }
 
@@ -127,6 +133,14 @@ body{
   outline:2px solid #000;
   border-radius: 4px;
 }
+
+.page-header-search:focus + .popover,
+.page-header-like:focus + .popover{
+  display: block;
+}
+
+/*.popover-active{
+  display:block;*/
 
 .page-header-search:active svg,
 .page-header-like:active svg{
@@ -145,6 +159,135 @@ body{
 
   background-color: #6C9E42;
   border-radius: 50%;
+}
+
+.popover{
+  position: absolute;
+  top: 64px;
+  right: 200px;
+  z-index: 1;
+  box-sizing: border-box;
+  min-width: 300px;
+  min-height: 186px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 0 0 5px 5px;
+  line-height: 24px;
+  font-size: 20px;
+  font-weight: 700;
+
+  display: none;
+}
+
+.popover-search{
+  min-height: fit-content;
+}
+
+.search-field-container{
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.header-search-field{
+  padding: 14px 20px;
+  border: none;
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+.header-search-field:placeholder-shown{
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.header-search-field:hover,
+.header-search-field:focus,
+.header-search-field:active,
+.popover-search-button:hover,
+.popover-search-button:focus,
+.popover-search-button:active{
+  background-color: #E6E6E6;
+}
+
+.header-search-field:focus,
+.header-search-field:active,
+.popover-search-button:focus,
+.popover-search-button:active{
+  outline: 2px solid #81B3D3;
+}
+
+.popover-search-button{
+  min-width: 44px;
+  min-height:52px;
+  border: none;
+  background-color: inherit;
+}
+
+
+.popover-like-list .hotel-card{
+  display: grid;
+  grid-template-columns: 105px 140px 140px 60px;
+  gap: 10px;
+  padding: 0;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.popover-like-list .hotel-card a{
+  grid-column: 1/4;
+  margin: 0;
+  margin-left: 10px;
+}
+
+.popover-like-list .hotel-card p{
+  grid-column: 1/2;
+  margin-left: 10px;
+}
+
+.popover-like-list .hotel-cost{
+  grid-column: 2/3;
+  justify-self: center;
+}
+
+.popover-like-list .hotel-rating{
+  grid-column: 3/4;
+  background-color: inherit;
+}
+
+.popover-like-list .like{
+  grid-column: 4/5;
+  grid-row: 1/3;
+  border:none;
+  background-color: inherit;
+  justify-self: center;
+  min-width: 44px;
+  min-height: 64px;
+  cursor: pointer;
+}
+
+.like svg{
+  fill: red;
+}
+
+.like:hover svg{
+  opacity: 0.6;
+}
+
+.like:focus svg{
+  fill: pink;
+}
+
+.like:active svg{
+  opacity: 0.3;
+}
+
+.popover-like-list ~ .button-base{
+  color: #fff;
+  display: inline-block;
+  margin-left: 10%;
+
 }
 
 .page-header-buttons .button-brown{
@@ -186,6 +329,8 @@ body{
   border: none;
 
   font-family: inherit;
+  font-size: 18px;
+  line-height: 24px;
   color: rgba(250, 250, 250, .6);
   background-color: #f2f2f2;
 }
@@ -195,6 +340,11 @@ body{
 }
 .email-field:focus + button{
   outline: 3px solid #83B3D3;
+}
+
+.email-field:hover:not(:placeholder-shown){
+  background-color: #F2F2F2;
+  outline: 2px solid #000000;
 }
 
 .page-footer-container{
@@ -387,7 +537,7 @@ body{
   min-height: 57px;
   left:0;
   bottom:0;
-  z-index: 10;
+  z-index: 2;
 
   background-image: url(../images/divider.svg);
   background-repeat: no-repeat;
@@ -562,7 +712,27 @@ body{
 
 
 /*HOTEL-SEARCH-FORM*/
-.hotel-search-form{
+
+.modal-window-closed{
+  display: none;
+}
+
+.modal-container{
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(242, 242, 242, 0.8);
+}
+
+.modal{
+  position: relative;
+
+  margin: auto;
+  background-color: #fff;
   padding: 64px 70px;
   border-radius: 30px;
   width: max-content;
@@ -641,6 +811,8 @@ body{
 .form-field{
   font-family: inherit;
   font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
   background-color: #F2F2F2;
   border-radius: 4px;
   border: none;
@@ -668,19 +840,16 @@ body{
   outline: 3px solid #83B3D3;
 }
 
-.form-field:hover:not(:placeholder-shown),
-.email-field:hover:not(:placeholder-shown){
+.form-field:hover:not(:placeholder-shown){
   background-color: #E6E6E6;
   outline: 2px solid #000000;
 }
-
 .form-date{
   grid-column: 1/2;
 }
 .form-date-field{
   grid-column: 2/-1;
 
-  appearance: none;
   background-image: url(../images/date.svg);
   background-repeat: no-repeat;
   background-position: right 20px center;
@@ -695,14 +864,14 @@ body{
 
 .wrong-date-comment{
   position: absolute;
-  top: 24px;
+  top: 28px;
   left: 137px;
   color:#FF5757;
 }
 
 .normal-comment{
   position: absolute;
-  top: 114px;
+  top: 126px;
   left: 137px;
   color: #333333;
 }
@@ -710,16 +879,64 @@ body{
 .adult-count{
  grid-column: 1/2;
 }
-.adult-count-field{
-  grid-column: 2/3;
-}
+
 .child-count{
   grid-column: 4/5;
-}
-.child-count-field{
-  grid-column: 5/6;
+  position: relative;
 }
 
+.adult-count-field::-webkit-outer-spin-button,
+.adult-count-field::-webkit-inner-spin-button,
+.child-count-field::-webkit-inner-spin-button,
+.child-count-field::-webkit-outer-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.adult-count-field,.child-count-field{
+  width: 31px;
+  text-align: center;
+  padding: 14px 0;
+  margin-right: 2px;
+}
+
+.count-field-wrapper{
+  background-color: #F2F2F2;
+  display: flex;
+  justify-content: space-around;
+  border-radius: 5px;
+}
+
+.count-button{
+  width: 40px;
+  min-height: 48px;
+
+  border: none;
+  border-radius: 5px;
+  background-color: inherit;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter:
+  opacity: .3;
+}
+
+.count-less{
+  background-image: url(../images/minus.svg);
+  left: 0;
+}
+
+.count-more{
+  background-image: url(../images/plus.svg);
+  right: 0;
+}
+
+.tooltip{
+  position: absolute;
+  right: 155px;
+  bottom: 110px;
+  width: 26px;
+  height: 26px;
+}
 
 .tooltip-button-information{
   min-width: 26px;
@@ -730,10 +947,11 @@ body{
   background-image: url(../images/information.svg);
   background-repeat: no-repeat;
   background-position: center;
+}
 
-  position: absolute;
-  right: 155px;
-  bottom: 105px;
+.tooltip-button-information:hover + .tooltip-text,
+.tooltip-button-information:focus + .tooltip-text {
+  display: block;
 }
 
 .tooltip-button-information:hover,
@@ -745,6 +963,41 @@ body{
   background-color: #82B3D3;
   opacity: .3;
 }
+
+.tooltip-text{
+  width: 256px;
+  padding: 15px 18px 18px 22px;
+  border-radius:10px;
+  background-color: #333333;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  color: #fff;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+
+  position: absolute;
+  top:100%;
+  margin-top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+
+  display: none;
+}
+
+.tooltip-text::before{
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: -4.5px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 10px;
+  height: 10px;
+  background-color: #333;
+}
+
+
 
 .hotel-search-form .button-base{
   background-color: #81B3D3;
@@ -832,6 +1085,10 @@ body{
 }
 
 .breadcrumbs a:hover{
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.breadcrumbs a:hover{
   color: rgba(255, 255, 255, 0.3);
 }
 
@@ -889,6 +1146,13 @@ body{
   border-radius: 50%;
 }
 
+.control-input:disabled,
+ .control-input:disabled + .control-mark,
+  .control-input:disabled + .control-title{
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #000;
+}
+
 .control:hover{
   opacity: .6;
 }
@@ -905,9 +1169,6 @@ body{
   opacity: .3;
 }
 
-.control-input:disabled, .control-input:disabled + .control-mark{
-  opacity: .3;
-}
 
 .control-input[type="checkbox"]:checked + .control-mark::after{
   content: "";
@@ -982,6 +1243,11 @@ body{
 
 .input-price:active{
   outline: 2px solid #000000;
+}
+
+.disabled{
+  background-color: rgba(0, 0, 0, 0.3);
+  cursor:default;
 }
 
 .input-min-wrapper{
