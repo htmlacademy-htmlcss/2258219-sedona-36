@@ -352,6 +352,10 @@ body{
   background-color: #68A2CA;
 }
 
+.email-subscription .block-comment p{
+  margin-top: 20px;
+}
+
 .subscription-form{
   display: flex;
   margin-top: 54px;
@@ -572,7 +576,7 @@ body{
   width: 100%;
   min-height: 57px;
   left:0;
-  bottom: -1px;;
+  bottom: 1px;
   z-index: 2;
 
   background-image: url(../images/divider.svg);
@@ -616,7 +620,7 @@ body{
   box-sizing: border-box;
   max-width: 400px;
   width: 100%;
-  padding: 102px 85px;
+  padding: 112.5px 85px;
 }
 
 .advantages-item h3{
@@ -1076,7 +1080,7 @@ body{
   background-size: 100% auto;
   background-repeat: no-repeat;
 
-  padding: 35px 70px 70px 70px;
+  padding: 35px 70px 58px 70px;
 }
 
 .hotel-filter ul,ol{
@@ -1087,7 +1091,7 @@ body{
 
 .hotel-filter h2{
   margin: 0;
-  margin-bottom: 8px;
+  margin-bottom: 7px;
   font-weight: 700;
   font-size: 60px;
   line-height: 78px;
@@ -1168,7 +1172,7 @@ body{
 
 .filter-list legend,
 .range-price legend{
-  margin-bottom: 32px;
+  margin-bottom: 31px;
 }
 
 .control{
@@ -1267,7 +1271,7 @@ cursor: default;
 }
 
 .input-price-wrapper{
-  margin-bottom: 36px;
+  margin-bottom: 42px;
   display: flex;
   gap: 2px;
 }
@@ -1278,7 +1282,7 @@ cursor: default;
   align-items: center;
   max-width: 143px;
   box-sizing: border-box;
-  padding: 12px 20px;
+  padding: 10px 20px;
 
   color: rgba(0, 0, 0, 0.3);
   font-size: 18px;
@@ -1368,6 +1372,8 @@ cursor: default;
   margin-top: auto;
   display: flex;
   flex-direction: column;
+  min-height: 104px;
+  flex-grow: 0;
 }
 
 .filter-form-buttons button{
@@ -1413,13 +1419,15 @@ cursor: default;
 .hotel-catalog-header{
   display: flex;
   justify-content: space-between;
-  margin-bottom: 40px;
+  margin-bottom: 38px;
 }
 
 .hotel-catalog-name{
-  text-transform: uppercase;
   margin: 0;
   align-self: center;
+  text-transform: uppercase;
+  font-size: 30px;
+  line-height: 36px;
 }
 
 .hotel-catalog-sorting{
@@ -1432,13 +1440,17 @@ cursor: default;
 
   cursor: pointer;
   color: #333;
+  font-family: inherit;
   font-size: 18px;
   line-height: 21px;
+  align-self: center;
 
+  box-sizing:border-box;
   border: 2px solid #e5e5e5;
   border-radius: 4px;
   padding: 12px 18px;
   padding-right: 40px;
+  min-width: 292px;
 
   appearance: none;
   background-image: url(../images/sort-arrow.svg);
@@ -1514,7 +1526,7 @@ cursor: default;
   position: relative;
   display: grid;
   grid-template-columns: repeat(3,340px);
-  gap: 20px;
+  gap: 20px 20px;
   margin-bottom: 80px;
 }
 
@@ -1545,7 +1557,10 @@ cursor: default;
   text-decoration: none;
   color: #000;
 
-  margin: 16px 0;
+  display: block;
+  width: 300px;
+  margin-top:0;
+  margin-bottom: 16px;
 }
 
 .hotel-card span{
@@ -1637,6 +1652,12 @@ cursor: default;
   padding: 0;
   justify-content: center;
   align-items: center;
+  margin-right: 4px;
+}
+
+.pagination-button:last-child{
+  margin-right: 0x;
+  margin-left: -4px;
 }
 
 .pagination-current{
