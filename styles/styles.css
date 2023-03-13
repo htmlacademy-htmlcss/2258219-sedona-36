@@ -40,7 +40,7 @@ body {
 
 img {
   max-width: 100%;
-  object-fit: contain;
+  display: block;
 }
 
 .visually-hidden {
@@ -631,7 +631,7 @@ img {
   width: 100%;
   min-height: 57px;
   left: 0;
-  bottom: 5px;
+  bottom: -1px;
   z-index: 2;
 
   background-image: url("../images/divider.svg");
@@ -968,12 +968,9 @@ img {
 .adult-count-field::-webkit-outer-spin-button,
 .adult-count-field::-webkit-inner-spin-button,
 .child-count-field::-webkit-inner-spin-button,
-.child-count-field::-webkit-outer-spin-button,
-.adult-count-field::-moz-outer-spin-button,
-.adult-count-field::-moz-inner-spin-button,
-.child-count-field::-moz-inner-spin-button,
-.child-count-field::-moz-outer-spin-button {
-  appearance: none;
+.child-count-field::-webkit-outer-spin-button{
+  -webkit-appearance: none;
+          appearance: none;
   margin: 0;
 }
 
@@ -982,6 +979,8 @@ img {
   width: 31px;
   text-align: center;
   padding: 14px 0;
+
+  -moz-appearance: textfield;
 }
 
 .count-field-wrapper {
@@ -1361,11 +1360,14 @@ ol.breadcrumbs {
 }
 
 .input-price-field::-webkit-outer-spin-button,
-.input-price-field::-webkit-inner-spin-button,
-.input-price-field::-moz-outer-spin-button,
-.input-price-field::-moz-inner-spin-button {
-  appearance: none;
+.input-price-field::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+          appearance: none;
   margin: 0;
+}
+
+.input-price-field {
+  -moz-appearance: textfield;
 }
 
 .range-scale {
@@ -1502,6 +1504,7 @@ ol.breadcrumbs {
   background-image: url("../images/sort-arrow.svg");
   background-repeat: no-repeat;
   background-position: right 20px center;
+  background-color: inherit;
 }
 
 .select-sorting:hover {
@@ -1537,7 +1540,7 @@ ol.breadcrumbs {
 
 .sorting-menu-button-active,
 .sorting-menu-button-active:active {
-  border: #000000;
+  border: 2px solid #000000;
 }
 
 .sorting-menu-button:not(:last-child) {
