@@ -380,7 +380,6 @@ body{
   font-family: inherit;
   font-size: 18px;
   line-height: 24px;
-  color: rgba(250, 250, 250, .6);
   background-color: #f2f2f2;
 }
 
@@ -389,11 +388,6 @@ body{
 }
 .email-field:focus + button{
   outline: 3px solid #83B3D3;
-}
-
-.email-field:hover:not(:placeholder-shown){
-  background-color: #F2F2F2;
-  outline: 2px solid #000000;
 }
 
 .page-footer-container{
@@ -571,6 +565,45 @@ body{
 .button-small{
   font-size: 16px;
   line-height: 20px;
+}
+
+
+.form-field:placeholder-shown,
+.email-field:placeholder-shown{
+  color: rgba(0, 0, 0, 0.6)
+}
+
+.form-field:not(:placeholder-shown),
+.email-field:not(:placeholder-shown),
+.input-price-field:not(:placeholder-shown){
+  color:#000000;
+}
+
+.form-field:hover,
+.email-field:hover,
+.input-price-field:hover{
+  background-color: #E6E6E6;
+}
+
+.form-field:focus,
+.email-field:focus,
+.input-price-field:focus{
+  background-color: #E6E6E6;
+  outline: 3px solid #83B3D3;
+}
+
+.form-field:hover:not(:placeholder-shown),
+.email-field:hover:not(:placeholder-shown),
+.input-price-field:hover:not(:placeholder-shown){
+  background-color: #E6E6E6;
+  outline: 2px solid #000000;
+}
+
+.form-field:disabled,
+.email-field:disabled,
+.input-price-field:disabled{
+  cursor: default;
+  opacity: 0.3;
 }
 
 
@@ -891,32 +924,6 @@ body{
 
 }
 
-.form-field:placeholder-shown,
-.email-field:placeholder-shown{
-  color: rgba(0, 0, 0, 0.6)
-}
-
-.form-field:not(:placeholder-shown),
-.email-field:not(:placeholder-shown){
-  color:#000
-}
-
-.form-field:hover,
-.email-field:hover{
-  background-color: #E6E6E6;
-}
-
-.form-field:focus,
-.email-field:focus{
-  background-color: #E6E6E6;
-  outline: 3px solid #83B3D3;
-}
-
-.form-field:hover:not(:placeholder-shown){
-  background-color: #E6E6E6;
-  outline: 2px solid #000000;
-}
-
 .form-date-field{
   box-sizing: border-box;
   width: 440px;
@@ -952,7 +959,11 @@ body{
 .adult-count-field::-webkit-outer-spin-button,
 .adult-count-field::-webkit-inner-spin-button,
 .child-count-field::-webkit-inner-spin-button,
-.child-count-field::-webkit-outer-spin-button {
+.child-count-field::-webkit-outer-spin-button,
+.adult-count-field::-moz-outer-spin-button,
+.adult-count-field::-moz-inner-spin-button,
+.child-count-field::-moz-inner-spin-button,
+.child-count-field::-moz-outer-spin-button {
   appearance: none;
   margin: 0;
 }
@@ -1341,10 +1352,14 @@ cursor: default;
 }
 
 .input-price-field::-webkit-outer-spin-button,
-.input-price-field::-webkit-inner-spin-button {
+.input-price-field::-webkit-inner-spin-button,
+.input-price-field::-moz-outer-spin-button,
+.input-price-field::-moz-inner-spin-button {
   appearance: none;
   margin: 0;
 }
+
+
 
 .range-scale{
   position: relative;
@@ -1387,6 +1402,10 @@ cursor: default;
   outline: 2px solid #83B3D3;
 }
 
+.input-price-field:disabled + .range-toggle{
+  cursor: default;
+  opacity: 0.3;
+}
 
 .filter-form-buttons{
   margin-top: 56px;
@@ -1438,7 +1457,7 @@ cursor: default;
 .hotel-catalog-header{
   display: flex;
   justify-content: space-between;
-  margin-bottom: 38px;
+  margin-bottom: 30px;
 }
 
 .hotel-catalog-name{
@@ -1447,6 +1466,7 @@ cursor: default;
   text-transform: uppercase;
   font-size: 30px;
   line-height: 36px;
+  margin-bottom: 8px;
 }
 
 .hotel-catalog-sorting{
