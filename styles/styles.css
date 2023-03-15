@@ -347,7 +347,7 @@ img {
 /* FOOTER */
 
 .email-subscription .block-comment {
-  padding: 96px 0 104px;
+  padding: 98px 0 104px;
 }
 
 .email-subscription .block-comment-container {
@@ -364,12 +364,11 @@ img {
 }
 
 .email-subscription .block-comment p {
-  margin-top: 20px;
+  margin: 20px 0 54px;
 }
 
 .subscription-form {
   display: flex;
-  margin-top: 54px;
 }
 
 .email-field {
@@ -425,6 +424,7 @@ img {
   text-decoration: none;
   color: #000000;
   outline: none;
+  margin: 5px 0;
 }
 
 .page-footer-socials svg {
@@ -454,6 +454,7 @@ img {
 .academy-logo {
   display: flex;
   align-items: center;
+  margin: 8.5px 0;
 }
 
 .academy-logo:hover svg,
@@ -807,7 +808,7 @@ img {
 }
 
 .hotel-search p {
-  margin: 18px 0 52px;
+  margin: 18px 0 54px;
 }
 
 .hotel-search button{
@@ -1220,6 +1221,7 @@ ol.breadcrumbs {
 .filter-list legend,
 .range-price legend {
   margin-bottom: 31px;
+  padding: 0;
 }
 
 .control {
@@ -1409,7 +1411,7 @@ ol.breadcrumbs {
 
 .toggle-max {
   top: -7px;
-  left: 206px;
+  right: -4px;
 }
 
 .range-toggle:focus {
@@ -1505,14 +1507,14 @@ ol.breadcrumbs {
   box-sizing: border-box;
   border: 2px solid #e5e5e5;
   border-radius: 4px;
-  padding: 12px 18px;
-  padding-right: 40px;
+  padding: 12px 20px;
+  padding-right: 30px;
   min-width: 292px;
 
   appearance: none;
   background-image: url("../images/sort-arrow.svg");
   background-repeat: no-repeat;
-  background-position: right 20px center;
+  background-position: right 16px center;
   background-color: inherit;
 }
 
@@ -1720,14 +1722,13 @@ span.hotel-cost {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin-right: 4px;
+  margin-right: 2px;
   font-size: 20px;
   line-height: 36px;
 }
 
 .pagination-button:last-child {
   margin-right: 0;
-  margin-left: -4px;
 }
 
 .pagination-current {
