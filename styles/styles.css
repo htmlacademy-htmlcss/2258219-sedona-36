@@ -19,16 +19,18 @@
 
 html {
   height: 100%;
+  background-color: #f2f2f2;
 }
 
 body {
   display: flex;
   flex-direction: column;
-  min-width: 1280px;
+  min-width: 1200px;
   min-height: 100%;
   margin: 0 40px;
 
   background-color: #ffffff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 22px;
@@ -37,8 +39,8 @@ body {
 }
 
 img {
-  max-width: 100%;
   display: block;
+  max-width: 100%;
 }
 
 .visually-hidden {
@@ -327,7 +329,7 @@ img {
 
 .page-header-buttons .button-brown {
   padding: 8px 34px;
-  margin-left: 20px;
+  margin: 14px 0 14px 20px;
   max-width: 160px;
 }
 
@@ -355,7 +357,7 @@ img {
 
 .main-index .email-subscription {
   background-image: url("../images/subscribe.jpg");
-  background-size: 100% auto;
+  background-size: cover;
   background-repeat: no-repeat;
   color: #ffffff;
   background-color: #68a2ca;
@@ -616,6 +618,11 @@ img {
 
 .sedona-introduction {
   position: relative;
+  min-height: 485px;
+  background-image: url("../images/index-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #83b3d3;
 }
 
 .welcome-text {
@@ -894,7 +901,7 @@ img {
   width: 577px;
   margin: 0 auto;
   grid-template-columns: 120px 110px 55px 112px 110px;
-  gap: 48px 18px;
+  gap: 27px 18px;
   align-items: center;
   font-family: inherit;
   font-weight: 700;
@@ -920,6 +927,7 @@ img {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 21px;
 }
 
 
@@ -930,6 +938,7 @@ img {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 21px;
 }
 
 .form-field {
@@ -952,12 +961,10 @@ img {
 }
 
 .date-comment {
-  position: absolute;
-  top: 26px;
   font-size: 16px;
   line-height: 21px;
   font-weight: 400;
-  padding: 26px 20px;
+  padding-left: 20px;
   color: #333333;
 }
 
@@ -1115,7 +1122,7 @@ img {
   background-color: #81b3d3;
   color: #ffffff;
   background-image: url("../images/filter.jpg");
-  background-size: 100% auto;
+  background-size: cover;
   background-repeat: no-repeat;
 
   padding: 35px 70px 58px;
@@ -1324,7 +1331,7 @@ ol.breadcrumbs {
   display: flex;
   align-items: center;
   box-sizing: border-box;
-  padding: 10px 20px;
+  padding: 10px 19px;
   color: rgba(0, 0, 0, 0.3);
   font-size: 18px;
   font-weight: 400;
@@ -1608,7 +1615,7 @@ ol.breadcrumbs {
   max-width: 340px;
 }
 
-.hotel-card a,
+.hotel-card a:not(.button-base),
 .hotel-card h3 {
   font-size: 24px;
   line-height: 28px;
@@ -1635,8 +1642,9 @@ span.hotel-cost {
   margin: 0;
 }
 
-.hotel-card button {
+.hotel-card .button-base {
   padding: 8px 20px;
+  text-align: center;
 }
 
 .hotel-card .button-liked {

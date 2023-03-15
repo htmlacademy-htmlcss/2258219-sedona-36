@@ -35,7 +35,7 @@
                 <form class="header-search-form">
                   <h2>Поиск</h2>
                   <div class="search-field-container">
-                    <label><input class="header-search-field" type="search" placeholder="Введите запрос"></label>
+                    <label><input class="header-search-field" type="search" name="page-search" placeholder="Введите запрос"></label>
 
                     <button class="popover-search-button" type="submit">
                       <span class="visually-hidden">Подтвердить поиск</span>
@@ -198,12 +198,12 @@
               <legend> Стоимость, ₽:</legend>
                 <div class="input-price-wrapper">
                   <label class="input-min-wrapper input-price">
-                    <input class="input-price-field" type="number" min="0" value="0" name="min-price">
+                    <input class="input-price-field" type="number" name="min-price" min="0" value="0">
                     от
                   </label>
 
                   <label class="input-max-wrapper input-price">
-                    <input class="input-price-field" type="number" max="10000" value="9000" name="max-price">
+                    <input class="input-price-field" type="number" name="max-price" max="10000" value="9000">
                     до
                   </label>
                 </div>
@@ -270,9 +270,9 @@
               <a href="#"><h3>Amara Resort & Spa</h3></a>
               <div class="hotel-information">
                 <p>Гостиница</p> <span class="hotel-cost">От 4000 ₽</span>
-                <button class="button-base  button-brown button-small" type="button">подробнее</button>
+                <a class="button-base button-brown button-small">подробнее</a>
                 <button class="button-base button-like button-small" type="button">в избранное</button>
-                <span class="hotel-star-four"></span>
+                <span class="hotel-star-four"><span class="visually-hidden">4 звезды</span></span>
                 <span class="hotel-rating">Рейтинг: 8,5</span>
               </div>
             </div>
@@ -284,9 +284,9 @@
               <a href="#"><h3>Villas at Poco Diablo</h3></a>
               <div class="hotel-information">
                 <p>Гостиница</p> <span class="hotel-cost">От 5000 ₽</span>
-                <button class="button-base button-brown button-small" type="button">подробнее</button>
+                <a class="button-base button-brown button-small">подробнее</a>
                 <button class="button-base button-liked button-small" type="button">в избранном</button>
-                <span class="hotel-star-four"></span>
+                <span class="hotel-star-four"><span class="visually-hidden">4 звезды</span></span>
                 <span class="hotel-rating">Рейтинг: 9,2</span>
               </div>
 
@@ -298,9 +298,9 @@
               <a href="#"><h3>Desert Quail Inn</h3></a>
               <div class="hotel-information">
                 <p>Гостиница</p> <span class="hotel-cost">От 2500 ₽</span>
-                <button class="button-base  button-brown button-small" type="button">подробнее</button>
+                <a class="button-base  button-brown button-small">подробнее</a>
                 <button class="button-base button-like button-small" type="button">в избранное</button>
-                <span class="hotel-star-three"></span>
+                <span class="hotel-star-three"><span class="visually-hidden">3 звезды</span></span>
                 <span class="hotel-rating">Рейтинг: 6,9</span>
               </div>
             </div>
@@ -312,9 +312,9 @@
               <a href="#"><h3>GreenTree Inn</h3></a>
               <div class="hotel-information">
                 <p>Гостиница</p> <span class="hotel-cost">От 1500 ₽</span>
-                <button class="button-base button-brown button-small" type="button">подробнее</button>
+                <a class="button-base button-brown button-small">подробнее</a>
                 <button class="button-base button-like button-small" type="button">в избранное</button>
-                <span class="hotel-star-two"></span>
+                <span class="hotel-star-two"><span class="visually-hidden">2 звезды</span></span>
                 <span class="hotel-rating">Рейтинг: 5,0</span>
               </div>
             </div>
@@ -341,8 +341,8 @@
             <h3>Подпишитесь на рассылку</h3>
             <p>Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
 
-            <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="get">
-              <input class="email-field" type="email" placeholder="Ваш e-mail" required>
+            <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
+              <input class="email-field" type="email" name="email-subscription" placeholder="Ваш e-mail" required>
               <button class="button-base" type="submit">Подписаться</button>
             </form>
           </div>

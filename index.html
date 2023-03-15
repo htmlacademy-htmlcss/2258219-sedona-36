@@ -35,7 +35,7 @@
                 <form class="header-search-form" action="https://echo.htmlacademy.ru/" method="get">
                   <h2>Поиск</h2>
                   <div class="search-field-container">
-                    <label><input class="header-search-field" type="search" placeholder="Введите запрос"></label>
+                    <label><input class="header-search-field" type="search" name="page-search" placeholder="Введите запрос"></label>
 
                     <button class="popover-search-button" type="submit">
                       <span class="visually-hidden">Подтвердить поиск</span>
@@ -113,7 +113,6 @@
 
       <!--SEDONA HERO-BLOCK aka INTRODUCTION-->
       <section class="sedona-introduction">
-        <img src="images/index-background.jpg" alt="Горы Седоны" width="1200" height="485">
         <img class="welcome-text" src="images/welcome.svg" alt="Welcome to the gorgeuos Sedona q:because the Grand Canyon sucks" width="485" height="352">
         <h2 class="visually-hidden">Добро пожаловать в Седону!</h2>
       </section>
@@ -214,8 +213,8 @@
             <h3>Подпишитесь на рассылку</h3>
             <p>Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
 
-            <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="get">
-              <input class="email-field" type="email" placeholder="Ваш e-mail" required>
+            <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
+              <input class="email-field" type="email" name="email-subscription" placeholder="Ваш e-mail" required>
               <button class="button-base" type="submit">Подписаться</button>
             </form>
           </div>
@@ -277,14 +276,14 @@
               <h3 class="visually-hidden">Настройка даты</h3>
               <label class="form-date form-arrival-date" for="arrival-date">Дата Заезда:</label>
                 <div class="input-comment-wrap">
-                  <input class="form-date-field form-field" type="text" id="arrival-date" placeholder="Укажите дату" value="27 апреля 2020">
+                  <input class="form-date-field form-field" type="text" id="arrival-date" name="arrival-date" placeholder="Укажите дату" value="27 апреля 2020">
                   <span class="wrong-date-comment date-comment">Мы не можем отправить вас в прошлое.</span>
                 </div>
 
 
               <label class="form-date form-departure-date" for="departure-date">Дата Выезда:</label>
                 <div class="input-comment-wrap">
-                  <input class="form-date-field form-field" type="text" id="departure-date" placeholder="Укажите дату" value="1 сентября 2023">
+                  <input class="form-date-field form-field" type="text" id="departure-date" name="departure-date" placeholder="Укажите дату" value="1 сентября 2023">
                   <span class="date-comment">На эти даты есть свободные номера. Пока есть.</span>
                 </div>
 
@@ -300,7 +299,7 @@
                       <span class="visually-hidden">Уменьшить количество.</span>
                     </button>
 
-                    <input class="adult-count-field form-field" type="number" id="adult-count" min="1" step="1" value="2">
+                    <input class="adult-count-field form-field" type="number" id="adult-count" name="adult-count" min="1" step="1" value="2">
 
                     <button class="count-button count-more" type="button">
                       <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 20 20"><path d="M17 9h-6V3H9v6H3v2h6v6h2v-6h6V9Z"/></svg>
@@ -330,7 +329,7 @@
                       <span class="visually-hidden">Уменьшить количество.</span>
                     </button>
 
-                    <input class="child-count-field form-field" type="number" id="child-count" min="0" step="1" value="2">
+                    <input class="child-count-field form-field" type="number" id="child-count" name="child-count" min="0" step="1" value="2">
 
                     <button class="count-button count-more" type="button">
                       <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 20 20"><path d="M17 9h-6V3H9v6H3v2h6v6h2v-6h6V9Z"/></svg>
