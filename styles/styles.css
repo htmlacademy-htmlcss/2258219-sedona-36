@@ -173,8 +173,8 @@ img {
   position: relative;
 }
 
-.page-header-search:focus-within ~ .popover,
-.page-header-like:focus-within ~ .popover {
+.page-header-search:focus ~ .popover,
+.page-header-like:focus ~ .popover {
   display: block;
 }/*должен оживляться через js добавление класса .popover-active*/
 
