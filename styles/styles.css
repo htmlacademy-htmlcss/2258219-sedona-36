@@ -173,10 +173,11 @@ img {
   position: relative;
 }
 
-.page-header-search:focus ~ .popover,
-.page-header-like:focus ~ .popover {
+.page-header-search:focus-within ~ .popover,
+.page-header-like:focus-within ~ .popover {
   display: block;
-}
+}/*должен оживляться через js добавление класса .popover-active*/
+
 
 .popover {
   display: none;
@@ -498,6 +499,7 @@ img {
 }
 
 .block-comment-container p {
+  margin-top: 24px;
   margin-bottom: 0;
   text-align: center;
 }
@@ -603,22 +605,22 @@ img {
   color: #000000;
 }
 
-.form-field:hover,
-.email-field:hover,
-.input-price-field:hover {
+.form-field:hover:not(:disabled),
+.email-field:hover:not(:disabled),
+.input-price-field:hover:not(:disabled) {
   background-color: #e6e6e6;
 }
 
-.form-field:focus,
-.email-field:focus,
-.input-price-field:focus {
+.form-field:focus:not(:disabled),
+.email-field:focus:not(:disabled),
+.input-price-field:focus:not(:disabled) {
   background-color: #e6e6e6;
   outline: 3px solid #83b3d3;
 }
 
-.form-field:hover:not(:placeholder-shown),
-.email-field:hover:not(:placeholder-shown),
-.input-price-field:hover:not(:placeholder-shown) {
+.form-field:hover:not(:placeholder-shown):not(:disabled),
+.email-field:hover:not(:placeholder-shown):not(:disabled),
+.input-price-field:hover:not(:placeholder-shown):not(:disabled) {
   background-color: #e6e6e6;
   outline: 2px solid #000000;
 }
@@ -748,13 +750,8 @@ img {
 }
 
 .service-item {
-  display: flex;
-  flex-direction: column;
+  position: relative;
   align-items: center;
-  justify-content: center;
-
-  max-width: 400px;
-  width: 100%;
   padding: 81px 85px;
 }
 
@@ -763,18 +760,14 @@ img {
 }
 
 .service-item h3 {
-  margin-top: 102px;
-  margin-bottom: 30px;
+  margin-top: 101px;
+  margin-bottom: 29px;
 }
 
-.service-item-lodging {
-  position: relative;
-}
-
-.service-item-lodging h3::before {
+.service-item-lodging::after {
   content: "";
   position: absolute;
-  top: 81px;
+  top: 77px;
   left: 162.5px;
   min-width: 76px;
   min-height: 76px;
@@ -784,14 +777,10 @@ img {
   background-position: center;
 }
 
-.service-item-food {
-  position: relative;
-}
-
-.service-item-food h3::before {
+.service-item-food::after {
   content: "";
   position: absolute;
-  top: 81px;
+  top: 77px;
   left: 162.5px;
   min-width: 76px;
   min-height: 76px;
@@ -801,14 +790,10 @@ img {
   background-position: center;
 }
 
-.service-item-souvenir {
-  position: relative;
-}
-
-.service-item-souvenir h3::before {
+.service-item-souvenir::after {
   content: "";
   position: absolute;
-  top: 81px;
+  top: 77px;
   left: 162.5px;
   min-width: 76px;
   min-height: 76px;
@@ -828,7 +813,7 @@ img {
 }
 
 .hotel-search p {
-  margin: 18px 0 54px;
+  margin: 19px 0 54px;
 }
 
 .hotel-search button{
@@ -839,21 +824,21 @@ img {
 
 /* HOTEL-SEARCH-FORM */
 
-.modal-window-closed {
-  display: none;
-}
-
-.modal-container {
+.modal-window {
   position: fixed;
   z-index: 5;
   top: 0;
   left: 0;
 
-  display: flex;
+  display: none;
   width: 100%;
   height: 100%;
 
   background-color: rgba(242, 242, 242, 0.8);
+}
+
+.modal-window-flex {
+  display: flex;
 }
 
 .modal {
@@ -1382,50 +1367,42 @@ ol.breadcrumbs {
 .input-price-wrapper {
   display: flex;
   gap: 2px;
-  margin-bottom: 46px;
+  margin-bottom: 44px;
 }
 
 .input-price {
-  display: flex;
-  align-items: center;
-  box-sizing: border-box;
-  padding: 10px 19px;
+  position: relative;
 
-  background-color: #f2f2f2;
   font-size: 18px;
   font-weight: 400;
   color: rgba(0, 0, 0, 0.3);
 }
 
-.input-price:hover,
-.input-price:focus {
-  background-color: #e6e6e6;
+.input-price span {
+  position: absolute;
+  top: 12px;
+  right: 20px;
 }
 
-.input-price:focus {
-  outline: 3px solid #83b3d3;
-}
-
-.input-price:active {
-  outline: 2px solid #000000;
-}
-
-.input-min-wrapper {
+.input-min-wrapper .input-price-field {
   border-radius: 5px 0 0 5px;
 }
 
-.input-max-wrapper {
+.input-max-wrapper .input-price-field {
   border-radius: 0 5px 5px 0;
 }
 
 .input-price-field {
-  max-width: 82px;
-  margin-right: 2px;
+  box-sizing: border-box;
+  max-width: 143px;
+  padding: 12px 40px 12px 20px;
 
   border: none;
-  background-color: transparent;
+  background-color: #f2f2f2;
 
   font-family: inherit;
+  font-size: 18px;
+  line-height: 24px;
   font-weight: 700;
 }
 
@@ -1438,6 +1415,10 @@ ol.breadcrumbs {
 
 .input-price-field {
   -moz-appearance: textfield;
+}
+
+.input-price-field:active:not(:disabled) {
+  outline: 2px solid #000000;
 }
 
 .range-scale {
@@ -1471,7 +1452,7 @@ ol.breadcrumbs {
 
 .toggle-max {
   top: -7px;
-  right: -4px;
+  left: 208px;
 }
 
 .range-toggle:focus {
@@ -1480,11 +1461,6 @@ ol.breadcrumbs {
 
 .range-toggle:active {
   outline: 2px solid #83b3d3;
-}
-
-.input-price-field:disabled + .range-toggle {
-  cursor: default;
-  opacity: 0.3;
 }
 
 .filter-form-buttons {
@@ -1657,7 +1633,7 @@ ol.breadcrumbs {
   display: grid;
   grid-template-columns: repeat(3, 340px);
   gap: 18px 20px;
-  margin-bottom: 75px;
+  margin-bottom: 77px;
 }
 
 .hotel-card-container::after {
