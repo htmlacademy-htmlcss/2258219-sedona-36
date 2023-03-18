@@ -18,14 +18,17 @@
 /*  Стили  */
 
 html {
-  height: 100%;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  min-height: 100%;
   background-color: #f2f2f2;
 }
 
 body {
   display: flex;
   flex-direction: column;
-  min-width: 1200px;
+  width: 1200px;
   min-height: 100%;
   margin: 0 40px;
 
